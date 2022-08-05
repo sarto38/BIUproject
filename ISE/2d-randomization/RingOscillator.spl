@@ -1,0 +1,8 @@
+[Inputs]
+=en[0:2]=
+[Outputs]
+out
+[BiDir]
+[ATTRIBUTES]
+VeriModel RingOscillator
+

@@ -1,0 +1,1077 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.23 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.24 secs
+ 
+--> Reading design: FPGA_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "FPGA_top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "FPGA_top"
+Output Format                      : NGC
+Target Device                      : xa6slx75-3-fgg484
+
+---- Source Options
+Top Module Name                    : FPGA_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\ISE\3LUt\FPGA_top.v" into library work
+Parsing verilog file "AND2.v" included at line 1.
+Parsing module <AND2>.
+Parsing verilog file "FSM.v" included at line 2.
+Parsing module <FSM>.
+INFO:HDLCompiler:693 - "FSM.v" Line 13. parameter declaration becomes local in FSM with formal parameter declaration list
+Parsing verilog file "SR_receive.v" included at line 3.
+Parsing module <SR_receive>.
+Parsing verilog file "SR_transmit.v" included at line 4.
+Parsing module <SR_transmit>.
+Parsing verilog file "UART_top.v" included at line 5.
+Parsing verilog file "UART_rx.v" included at line 1.
+Parsing module <UART_rx>.
+Parsing verilog file "UART_tx.v" included at line 2.
+Parsing module <UART_tx>.
+Parsing verilog file "UART_baudrate_generator.v" included at line 3.
+Parsing module <UART_BaudRate_generator>.
+Parsing module <UART_top>.
+Parsing verilog file "RingOscillator.v" included at line 6.
+Parsing module <RingOscillator>.
+Parsing module <FPGA_top>.
+WARNING:HDLCompiler:1335 - "C:\ISE\3LUt\FPGA_top.v" Line 13: Port FTDI_BDBUS must not be declared to be an array
+Parsing VHDL file "C:\ISE\3LUt\clk_4Mhz.vhd" into library work
+Parsing entity <clk_4Mhz>.
+Parsing architecture <xilinx> of entity <clk_4mhz>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <FPGA_top>.
+Going to vhdl side to elaborate module clk_4Mhz
+
+Elaborating entity <clk_4Mhz> (architecture <xilinx>) from library <work>.
+Back to verilog to continue elaboration
+
+Elaborating module <UART_top>.
+
+Elaborating module <UART_rx>.
+WARNING:HDLCompiler:413 - "UART_rx.v" Line 107: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "UART_rx.v" Line 118: Result of 6-bit expression is truncated to fit in 5-bit target.
+
+Elaborating module <UART_tx>.
+WARNING:HDLCompiler:413 - "UART_tx.v" Line 114: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "UART_tx.v" Line 132: Result of 6-bit expression is truncated to fit in 5-bit target.
+
+Elaborating module <UART_BaudRate_generator>.
+
+Elaborating module <FSM(M=16)>.
+WARNING:HDLCompiler:413 - "FSM.v" Line 44: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "FSM.v" Line 64: Result of 5-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <SR_receive(M=16)>.
+WARNING:HDLCompiler:1016 - "AND2.v" Line 94: Port O6 is not connected to this instance
+
+Elaborating module <AND2(D=3)>.
+
+Elaborating module <LUT6_2(INIT=64'b010101010000000001010101010001000100001110111011101111000)>.
+WARNING:HDLCompiler:413 - "AND2.v" Line 84: Result of 3-bit expression is truncated to fit in 2-bit target.
+
+Elaborating module <LUT6_2(INIT=64'b010010110100101101001011010010110)>.
+
+Elaborating module <LUT6_2(INIT=64'b1001011010010110100101101001011010010110100101101001011010010110)>.
+WARNING:HDLCompiler:1127 - "C:\ISE\3LUt\FPGA_top.v" Line 111: Assignment to OutAnd ignored, since the identifier is never used
+
+Elaborating module <SR_transmit(D=3)>.
+WARNING:HDLCompiler:189 - "C:\ISE\3LUt\FPGA_top.v" Line 117: Size mismatch in connection of port <in>. Formal port size is 3-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:634 - "C:\ISE\3LUt\FPGA_top.v" Line 38: Net <OutAndFinel[1]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <FPGA_top>.
+    Related source file is "C:\ISE\3LUt\FPGA_top.v".
+        D = 3
+        M = 16
+INFO:Xst:3210 - "C:\ISE\3LUt\FPGA_top.v" line 52: Output port <LOCKED> of the instance <newClk> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\ISE\3LUt\FPGA_top.v" line 105: Output port <out> of the instance <I_AND> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <OutAndFinel> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <FPGA_top> synthesized.
+
+Synthesizing Unit <clk_4Mhz>.
+    Related source file is "C:\ISE\3LUt\clk_4Mhz.vhd".
+    Summary:
+	no macro.
+Unit <clk_4Mhz> synthesized.
+
+Synthesizing Unit <UART_top>.
+    Related source file is "C:\ISE\3LUt/UART_top.v".
+    Summary:
+	no macro.
+Unit <UART_top> synthesized.
+
+Synthesizing Unit <UART_rx>.
+    Related source file is "C:\ISE\3LUt/UART_rx.v".
+        IDLE = 1'b0
+        READ = 1'b1
+    Found 1-bit register for signal <RxDone>.
+    Found 2-bit register for signal <State>.
+    Found 4-bit register for signal <counter>.
+    Found 1-bit register for signal <start_bit>.
+    Found 5-bit register for signal <Bit>.
+    Found 8-bit register for signal <Read_data>.
+    Found 8-bit register for signal <RxData>.
+    Found finite state machine <FSM_0> for signal <State>.
+    -----------------------------------------------------------------------
+    | States             | 2                                              |
+    | Transitions        | 5                                              |
+    | Inputs             | 4                                              |
+    | Outputs            | 2                                              |
+    | Clock              | Clk (rising_edge)                              |
+    | Reset              | Rst_n (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit adder for signal <counter[3]_GND_14_o_add_13_OUT> created at line 107.
+    Found 5-bit adder for signal <Bit[4]_GND_14_o_add_18_OUT> created at line 118.
+WARNING:Xst:737 - Found 1-bit latch for signal <read_enable>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 5-bit comparator greater for signal <Bit[4]_GND_14_o_LessThan_18_o> created at line 116
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  27 D-type flip-flop(s).
+	inferred   1 Latch(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <UART_rx> synthesized.
+
+Synthesizing Unit <UART_tx>.
+    Related source file is "C:\ISE\3LUt/UART_tx.v".
+        IDLE = 1'b0
+        WRITE = 1'b1
+    Found 1-bit register for signal <TxDone>.
+    Found 1-bit register for signal <State>.
+    Found 1-bit register for signal <Tx>.
+    Found 2-bit register for signal <R_edge>.
+    Found 1-bit register for signal <start_bit>.
+    Found 1-bit register for signal <stop_bit>.
+    Found 4-bit register for signal <counter>.
+    Found 8-bit register for signal <in_data>.
+    Found 5-bit register for signal <Bit>.
+    Found 4-bit adder for signal <counter[3]_GND_16_o_add_1_OUT> created at line 114.
+    Found 5-bit adder for signal <Bit[4]_GND_16_o_add_8_OUT> created at line 132.
+    Found 32-bit comparator greater for signal <GND_16_o_GND_16_o_LessThan_8_o> created at line 129
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  24 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   7 Multiplexer(s).
+Unit <UART_tx> synthesized.
+
+Synthesizing Unit <UART_BaudRate_generator>.
+    Related source file is "C:\ISE\3LUt/UART_baudrate_generator.v".
+    Found 16-bit register for signal <baudRateReg>.
+    Found 16-bit adder for signal <baudRateReg[15]_GND_18_o_add_0_OUT> created at line 25.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <UART_BaudRate_generator> synthesized.
+
+Synthesizing Unit <FSM>.
+    Related source file is "C:\ISE\3LUt/FSM.v".
+        M = 16
+WARNING:Xst:647 - Input <TxDone> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 4-bit register for signal <State>.
+    Found 1-bit register for signal <TxEn>.
+    Found 1-bit register for signal <RstReceive>.
+    Found 1-bit register for signal <RstTransmit>.
+    Found 1-bit register for signal <RstUART>.
+    Found 8-bit register for signal <cnt>.
+    Found 1-bit register for signal <SetReceive>.
+    Found 1-bit register for signal <AndEnable>.
+    Found 4-bit register for signal <delay>.
+    Found 1-bit register for signal <Triger>.
+    Found 1-bit register for signal <flag>.
+    Found finite state machine <FSM_1> for signal <State>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 14                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | RstFSM (negative)                              |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0000                                           |
+    | Power Up State     | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit adder for signal <cnt[7]_GND_20_o_add_4_OUT> created at line 44.
+    Found 4-bit adder for signal <delay[3]_GND_20_o_add_9_OUT> created at line 64.
+    Found 8-bit comparator greater for signal <n0006> created at line 58
+    Found 4-bit comparator greater for signal <delay[3]_PWR_15_o_LessThan_9_o> created at line 62
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  20 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   1 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <FSM> synthesized.
+
+Synthesizing Unit <SR_receive>.
+    Related source file is "C:\ISE\3LUt/SR_receive.v".
+        M = 16
+    Found 1-bit register for signal <n0069<15>>.
+    Found 1-bit register for signal <n0069<14>>.
+    Found 1-bit register for signal <n0069<13>>.
+    Found 1-bit register for signal <n0069<12>>.
+    Found 1-bit register for signal <n0069<11>>.
+    Found 1-bit register for signal <n0069<10>>.
+    Found 1-bit register for signal <n0069<9>>.
+    Found 1-bit register for signal <n0069<8>>.
+    Found 1-bit register for signal <n0069<7>>.
+    Found 1-bit register for signal <n0069<6>>.
+    Found 1-bit register for signal <n0069<5>>.
+    Found 1-bit register for signal <n0069<4>>.
+    Found 1-bit register for signal <n0069<3>>.
+    Found 1-bit register for signal <n0069<2>>.
+    Found 1-bit register for signal <n0069<1>>.
+    Found 1-bit register for signal <n0069<0>>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <SR_receive> synthesized.
+
+Synthesizing Unit <AND2>.
+    Related source file is "C:\ISE\3LUt/AND2.v".
+        D = 3
+    Set property "DONT_TOUCH = true" for instance <And1>.
+    Set property "LOCK_PINS = ALL" for instance <And1>.
+    Set property "KEEP_HIERARCHY = TRUE" for instance <And1>.
+    Set property "DONT_TOUCH = true" for instance <And2>.
+    Set property "LOCK_PINS = ALL" for instance <And2>.
+    Set property "KEEP_HIERARCHY = TRUE" for instance <And2>.
+    Set property "DONT_TOUCH = true" for instance <And3>.
+    Set property "LOCK_PINS = ALL" for instance <And3>.
+    Set property "KEEP_HIERARCHY = TRUE" for instance <And3>.
+    Set property "DONT_TOUCH = true" for instance <And5>.
+    Set property "LOCK_PINS = ALL" for instance <And5>.
+    Set property "KEEP_HIERARCHY = TRUE" for instance <And5>.
+    Set property "DONT_TOUCH = true" for instance <And6>.
+    Set property "LOCK_PINS = ALL" for instance <And6>.
+    Set property "KEEP_HIERARCHY = TRUE" for instance <And6>.
+    Found 9-bit register for signal <mid_reg>.
+    Found 3-bit register for signal <out>.
+    Found 2-bit register for signal <counter>.
+    Found 1-bit register for signal <AndDone>.
+    Found 2-bit adder for signal <counter[1]_GND_22_o_add_3_OUT> created at line 84.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  15 D-type flip-flop(s).
+Unit <AND2> synthesized.
+
+Synthesizing Unit <SR_transmit>.
+    Related source file is "C:\ISE\3LUt/SR_transmit.v".
+        D = 3
+    WARNING:Xst:2404 -  FFs/Latches <reg_mat<1><3:3>> (without init value) have a constant value of 0 in block <SR_transmit>.
+    WARNING:Xst:2404 -  FFs/Latches <reg_mat<0><1:1>> (without init value) have a constant value of 0 in block <SR_transmit>.
+    WARNING:Xst:2404 -  FFs/Latches <reg_mat<2><0:0>> (without init value) have a constant value of 0 in block <SR_transmit>.
+    Summary:
+	no macro.
+Unit <SR_transmit> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 8
+ 16-bit adder                                          : 1
+ 2-bit adder                                           : 1
+ 4-bit adder                                           : 3
+ 5-bit adder                                           : 2
+ 8-bit adder                                           : 1
+# Registers                                            : 46
+ 1-bit register                                        : 32
+ 16-bit register                                       : 1
+ 2-bit register                                        : 2
+ 3-bit register                                        : 1
+ 4-bit register                                        : 3
+ 5-bit register                                        : 2
+ 8-bit register                                        : 4
+ 9-bit register                                        : 1
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+# Comparators                                          : 4
+ 32-bit comparator greater                             : 1
+ 4-bit comparator greater                              : 1
+ 5-bit comparator greater                              : 1
+ 8-bit comparator greater                              : 1
+# Multiplexers                                         : 11
+ 1-bit 2-to-1 multiplexer                              : 4
+ 16-bit 2-to-1 multiplexer                             : 2
+ 4-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 3
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <R_edge_0> (without init value) has a constant value of 0 in block <I_TX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <TxEn> (without init value) has a constant value of 0 in block <I_FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R_edge_1> (without init value) has a constant value of 0 in block <I_TX>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <AND2>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <AND2> synthesized (advanced).
+
+Synthesizing (advanced) Unit <FSM>.
+The following registers are absorbed into counter <delay>: 1 register on signal <delay>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <FSM> synthesized (advanced).
+
+Synthesizing (advanced) Unit <UART_BaudRate_generator>.
+The following registers are absorbed into counter <baudRateReg>: 1 register on signal <baudRateReg>.
+Unit <UART_BaudRate_generator> synthesized (advanced).
+
+Synthesizing (advanced) Unit <UART_rx>.
+The following registers are absorbed into counter <Bit>: 1 register on signal <Bit>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <UART_rx> synthesized (advanced).
+
+Synthesizing (advanced) Unit <UART_tx>.
+The following registers are absorbed into counter <Bit>: 1 register on signal <Bit>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <UART_tx> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 8
+ 16-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 4-bit up counter                                      : 3
+ 5-bit up counter                                      : 2
+ 8-bit up counter                                      : 1
+# Registers                                            : 70
+ Flip-Flops                                            : 70
+# Comparators                                          : 4
+ 32-bit comparator greater                             : 1
+ 4-bit comparator greater                              : 1
+ 5-bit comparator greater                              : 1
+ 8-bit comparator greater                              : 1
+# Multiplexers                                         : 20
+ 1-bit 2-to-1 multiplexer                              : 19
+ 16-bit 2-to-1 multiplexer                             : 1
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <TxEn> (without init value) has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <I_UART_top/I_RX/FSM_0> on signal <State[1:1]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 0
+ 01    | 1
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <I_FSM/FSM_1> on signal <State[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 00
+ 0001  | 01
+ 0011  | 11
+ 0100  | 10
+-------------------
+WARNING:Xst:1294 - Latch <read_enable> is equivalent to a wire in block <UART_rx>.
+WARNING:Xst:1293 - FF/Latch <in_data_0> has a constant value of 0 in block <UART_tx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <in_data_1> has a constant value of 0 in block <UART_tx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <in_data_2> has a constant value of 0 in block <UART_tx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <in_data_3> has a constant value of 0 in block <UART_tx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <in_data_4> has a constant value of 0 in block <UART_tx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <in_data_5> has a constant value of 0 in block <UART_tx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <in_data_6> has a constant value of 0 in block <UART_tx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <in_data_7> has a constant value of 0 in block <UART_tx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Automotive Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Automotive Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    n0069_0 in unit <SR_receive>
+    n0069_1 in unit <SR_receive>
+    n0069_2 in unit <SR_receive>
+    n0069_3 in unit <SR_receive>
+    n0069_4 in unit <SR_receive>
+    n0069_5 in unit <SR_receive>
+    n0069_6 in unit <SR_receive>
+    n0069_7 in unit <SR_receive>
+    n0069_8 in unit <SR_receive>
+    n0069_9 in unit <SR_receive>
+    n0069_10 in unit <SR_receive>
+    n0069_11 in unit <SR_receive>
+    n0069_12 in unit <SR_receive>
+    n0069_14 in unit <SR_receive>
+    n0069_15 in unit <SR_receive>
+    n0069_13 in unit <SR_receive>
+
+
+Optimizing unit <FPGA_top> ...
+
+Optimizing unit <UART_tx> ...
+
+Optimizing unit <UART_rx> ...
+
+Optimizing unit <SR_receive> ...
+
+Optimizing unit <FSM> ...
+
+Optimizing unit <AND2> ...
+WARNING:Xst:1710 - FF/Latch <I_UART_top/I_TX/Tx> (without init value) has a constant value of 1 in block <FPGA_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <I_UART_top/I_TX/R_edge_0> (without init value) has a constant value of 0 in block <FPGA_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <I_UART_top/I_TX/State> (without init value) has a constant value of 0 in block <FPGA_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <I_UART_top/I_TX/R_edge_1> (without init value) has a constant value of 0 in block <FPGA_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <I_FSM/RstTransmit> of sequential type is unconnected in block <FPGA_top>.
+WARNING:Xst:2677 - Node <I_AND/out_0> of sequential type is unconnected in block <FPGA_top>.
+WARNING:Xst:2677 - Node <I_AND/out_1> of sequential type is unconnected in block <FPGA_top>.
+WARNING:Xst:2677 - Node <I_AND/out_2> of sequential type is unconnected in block <FPGA_top>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <I_UART_top/I_TX/TxDone> is unconnected in block <FPGA_top>.
+WARNING:Xst:2677 - Node <I_UART_top/I_TX/Bit_4> of sequential type is unconnected in block <FPGA_top>.
+WARNING:Xst:2677 - Node <I_UART_top/I_TX/Bit_3> of sequential type is unconnected in block <FPGA_top>.
+WARNING:Xst:2677 - Node <I_UART_top/I_TX/Bit_2> of sequential type is unconnected in block <FPGA_top>.
+WARNING:Xst:2677 - Node <I_UART_top/I_TX/Bit_1> of sequential type is unconnected in block <FPGA_top>.
+WARNING:Xst:2677 - Node <I_UART_top/I_TX/Bit_0> of sequential type is unconnected in block <FPGA_top>.
+WARNING:Xst:2677 - Node <I_UART_top/I_TX/counter_3> of sequential type is unconnected in block <FPGA_top>.
+WARNING:Xst:2677 - Node <I_UART_top/I_TX/counter_1> of sequential type is unconnected in block <FPGA_top>.
+WARNING:Xst:2677 - Node <I_UART_top/I_TX/counter_0> of sequential type is unconnected in block <FPGA_top>.
+WARNING:Xst:2677 - Node <I_UART_top/I_TX/counter_2> of sequential type is unconnected in block <FPGA_top>.
+WARNING:Xst:2677 - Node <I_UART_top/I_TX/start_bit> of sequential type is unconnected in block <FPGA_top>.
+WARNING:Xst:2677 - Node <I_UART_top/I_TX/stop_bit> of sequential type is unconnected in block <FPGA_top>.
+WARNING:Xst:1710 - FF/Latch <I_UART_top/I_BAUDGEN/baudRateReg_5> (without init value) has a constant value of 0 in block <FPGA_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <I_UART_top/I_BAUDGEN/baudRateReg_6> (without init value) has a constant value of 0 in block <FPGA_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <I_UART_top/I_BAUDGEN/baudRateReg_9> (without init value) has a constant value of 0 in block <FPGA_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <I_UART_top/I_BAUDGEN/baudRateReg_7> (without init value) has a constant value of 0 in block <FPGA_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <I_UART_top/I_BAUDGEN/baudRateReg_8> (without init value) has a constant value of 0 in block <FPGA_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <I_UART_top/I_BAUDGEN/baudRateReg_12> (without init value) has a constant value of 0 in block <FPGA_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <I_UART_top/I_BAUDGEN/baudRateReg_10> (without init value) has a constant value of 0 in block <FPGA_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <I_UART_top/I_BAUDGEN/baudRateReg_11> (without init value) has a constant value of 0 in block <FPGA_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <I_UART_top/I_BAUDGEN/baudRateReg_15> (without init value) has a constant value of 0 in block <FPGA_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <I_UART_top/I_BAUDGEN/baudRateReg_13> (without init value) has a constant value of 0 in block <FPGA_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <I_UART_top/I_BAUDGEN/baudRateReg_14> (without init value) has a constant value of 0 in block <FPGA_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <I_UART_top/I_RX/Bit_4> has a constant value of 0 in block <FPGA_top>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block FPGA_top, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 80
+ Flip-Flops                                            : 80
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : FPGA_top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 152
+#      GND                         : 1
+#      INV                         : 4
+#      LUT1                        : 12
+#      LUT2                        : 21
+#      LUT3                        : 31
+#      LUT4                        : 12
+#      LUT5                        : 23
+#      LUT6                        : 18
+#      LUT6_2                      : 5
+#      MUXCY                       : 11
+#      VCC                         : 1
+#      XORCY                       : 13
+# FlipFlops/Latches                : 96
+#      FD                          : 38
+#      FDC                         : 7
+#      FDCE                        : 1
+#      FDP                         : 1
+#      FDP_1                       : 16
+#      FDR                         : 3
+#      FDRE                        : 14
+#      LDC                         : 16
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 8
+#      IBUF                        : 2
+#      IBUFG                       : 1
+#      OBUF                        : 5
+# DCMs                             : 1
+#      DCM_SP                      : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : xa6slx75fgg484-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              96  out of  93296     0%  
+ Number of Slice LUTs:                  126  out of  46648     0%  
+    Number used as Logic:               126  out of  46648     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    151
+   Number with an unused Flip Flop:      55  out of    151    36%  
+   Number with an unused LUT:            25  out of    151    16%  
+   Number of fully used LUT-FF pairs:    71  out of    151    47%  
+   Number of unique control sets:        41
+
+IO Utilization: 
+ Number of IOs:                           8
+ Number of bonded IOBs:                   8  out of    280     2%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------------------------------------------------------+-----------------------------------+-------+
+Clock Signal                                                                                 | Clock buffer(FF name)             | Load  |
+---------------------------------------------------------------------------------------------+-----------------------------------+-------+
+M_CLK_OSC                                                                                    | DCM_SP:CLKDV                      | 46    |
+I_UART_top/tick(I_UART_top/I_BAUDGEN/Tick<15>1:O)                                            | NONE(*)(I_UART_top/I_RX/RxDone)   | 18    |
+I_SR_receive/GND_21_o_reg_mat[1][0]_AND_52_o(I_SR_receive/GND_21_o_reg_mat[1][0]_AND_52_o1:O)| NONE(*)(I_SR_receive/n0069_0_LDC) | 1     |
+I_FSM/RstReceive                                                                             | NONE(I_SR_receive/n0069_0_P_0)    | 16    |
+I_SR_receive/GND_21_o_reg_mat[1][1]_AND_50_o(I_SR_receive/GND_21_o_reg_mat[1][1]_AND_50_o1:O)| NONE(*)(I_SR_receive/n0069_1_LDC) | 1     |
+I_SR_receive/GND_21_o_reg_mat[1][2]_AND_48_o(I_SR_receive/GND_21_o_reg_mat[1][2]_AND_48_o1:O)| NONE(*)(I_SR_receive/n0069_2_LDC) | 1     |
+I_SR_receive/GND_21_o_reg_mat[1][3]_AND_46_o(I_SR_receive/GND_21_o_reg_mat[1][3]_AND_46_o1:O)| NONE(*)(I_SR_receive/n0069_3_LDC) | 1     |
+I_SR_receive/GND_21_o_reg_mat[1][4]_AND_44_o(I_SR_receive/GND_21_o_reg_mat[1][4]_AND_44_o1:O)| NONE(*)(I_SR_receive/n0069_4_LDC) | 1     |
+I_SR_receive/GND_21_o_reg_mat[1][5]_AND_42_o(I_SR_receive/GND_21_o_reg_mat[1][5]_AND_42_o1:O)| NONE(*)(I_SR_receive/n0069_5_LDC) | 1     |
+I_SR_receive/GND_21_o_reg_mat[1][6]_AND_40_o(I_SR_receive/GND_21_o_reg_mat[1][6]_AND_40_o1:O)| NONE(*)(I_SR_receive/n0069_6_LDC) | 1     |
+I_SR_receive/GND_21_o_reg_mat[1][7]_AND_38_o(I_SR_receive/GND_21_o_reg_mat[1][7]_AND_38_o1:O)| NONE(*)(I_SR_receive/n0069_7_LDC) | 1     |
+I_SR_receive/GND_21_o_in[0]_AND_36_o(I_SR_receive/GND_21_o_in[0]_AND_36_o1:O)                | NONE(*)(I_SR_receive/n0069_8_LDC) | 1     |
+I_SR_receive/GND_21_o_in[1]_AND_34_o(I_SR_receive/GND_21_o_in[1]_AND_34_o1:O)                | NONE(*)(I_SR_receive/n0069_9_LDC) | 1     |
+I_SR_receive/GND_21_o_in[2]_AND_32_o(I_SR_receive/GND_21_o_in[2]_AND_32_o1:O)                | NONE(*)(I_SR_receive/n0069_10_LDC)| 1     |
+I_SR_receive/GND_21_o_in[3]_AND_30_o(I_SR_receive/GND_21_o_in[3]_AND_30_o1:O)                | NONE(*)(I_SR_receive/n0069_11_LDC)| 1     |
+I_SR_receive/GND_21_o_in[4]_AND_28_o(I_SR_receive/GND_21_o_in[4]_AND_28_o1:O)                | NONE(*)(I_SR_receive/n0069_12_LDC)| 1     |
+I_SR_receive/GND_21_o_in[6]_AND_24_o(I_SR_receive/GND_21_o_in[6]_AND_24_o1:O)                | NONE(*)(I_SR_receive/n0069_14_LDC)| 1     |
+I_SR_receive/GND_21_o_in[7]_AND_22_o(I_SR_receive/GND_21_o_in[7]_AND_22_o1:O)                | NONE(*)(I_SR_receive/n0069_15_LDC)| 1     |
+I_SR_receive/GND_21_o_in[5]_AND_26_o(I_SR_receive/GND_21_o_in[5]_AND_26_o1:O)                | NONE(*)(I_SR_receive/n0069_13_LDC)| 1     |
+---------------------------------------------------------------------------------------------+-----------------------------------+-------+
+(*) These 17 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.982ns (Maximum Frequency: 251.124MHz)
+   Minimum input arrival time before clock: 5.452ns
+   Maximum output required time after clock: 3.762ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'M_CLK_OSC'
+  Clock period: 0.434ns (frequency: 2304.877MHz)
+  Total number of paths / destination ports: 445 / 75
+-------------------------------------------------------------------------
+Delay:               5.206ns (Levels of Logic = 4)
+  Source:            I_FSM/cnt_6 (FF)
+  Destination:       I_FSM/flag (FF)
+  Source Clock:      M_CLK_OSC rising 0.1X
+  Destination Clock: M_CLK_OSC rising 0.1X
+
+  Data Path: I_FSM/cnt_6 to I_FSM/flag
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.447   0.981  I_FSM/cnt_6 (I_FSM/cnt_6)
+     LUT6:I0->O            5   0.203   0.943  I_FSM/n00061 (I_FSM/n00061)
+     LUT6:I3->O            3   0.205   0.995  I_FSM/_n02251 (I_FSM/_n0225)
+     LUT5:I0->O            1   0.203   0.924  I_FSM/flag_glue_set (I_FSM/flag_glue_set)
+     LUT5:I0->O            1   0.203   0.000  I_FSM/flag_rstpot (I_FSM/flag_rstpot)
+     FD:D                      0.102          I_FSM/flag
+    ----------------------------------------
+    Total                      5.206ns (1.363ns logic, 3.843ns route)
+                                       (26.2% logic, 73.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'I_UART_top/tick'
+  Clock period: 3.982ns (frequency: 251.124MHz)
+  Total number of paths / destination ports: 204 / 18
+-------------------------------------------------------------------------
+Delay:               3.982ns (Levels of Logic = 3)
+  Source:            I_UART_top/I_RX/Bit_3 (FF)
+  Destination:       I_UART_top/I_RX/Bit_1 (FF)
+  Source Clock:      I_UART_top/tick rising
+  Destination Clock: I_UART_top/tick rising
+
+  Data Path: I_UART_top/I_RX/Bit_3 to I_UART_top/I_RX/Bit_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              17   0.447   1.028  I_UART_top/I_RX/Bit_3 (I_UART_top/I_RX/Bit_3)
+     LUT5:I4->O            6   0.205   0.745  I_UART_top/I_RX/counter[3]_Rx_AND_9_o11 (I_UART_top/I_RX/counter[3]_Rx_AND_9_o1)
+     LUT5:I4->O            4   0.205   1.048  I_UART_top/I_RX/_n01031 (I_UART_top/I_RX/_n0103)
+     LUT6:I0->O            1   0.203   0.000  I_UART_top/I_RX/Bit_1_rstpot (I_UART_top/I_RX/Bit_1_rstpot)
+     FD:D                      0.102          I_UART_top/I_RX/Bit_1
+    ----------------------------------------
+    Total                      3.982ns (1.162ns logic, 2.820ns route)
+                                       (29.2% logic, 70.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'I_FSM/RstReceive'
+  Clock period: 2.452ns (frequency: 407.913MHz)
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Delay:               2.452ns (Levels of Logic = 1)
+  Source:            I_SR_receive/n0069_8_P_8 (FF)
+  Destination:       I_SR_receive/n0069_0_P_0 (FF)
+  Source Clock:      I_FSM/RstReceive falling
+  Destination Clock: I_FSM/RstReceive falling
+
+  Data Path: I_SR_receive/n0069_8_P_8 to I_SR_receive/n0069_0_P_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP_1:C->Q            3   0.447   0.755  I_SR_receive/n0069_8_P_8 (I_SR_receive/n0069_8_P_8)
+     LUT3:I1->O            2   0.203   0.616  I_SR_receive/GND_21_o_reg_mat[1][0]_AND_52_o1 (I_SR_receive/GND_21_o_reg_mat[1][0]_AND_52_o)
+     FDP_1:PRE                 0.430          I_SR_receive/n0069_0_P_0
+    ----------------------------------------
+    Total                      2.452ns (1.080ns logic, 1.372ns route)
+                                       (44.1% logic, 55.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'M_CLK_OSC'
+  Total number of paths / destination ports: 47 / 36
+-------------------------------------------------------------------------
+Offset:              5.452ns (Levels of Logic = 4)
+  Source:            M_RESET_B (PAD)
+  Destination:       I_FSM/cnt_7 (FF)
+  Destination Clock: M_CLK_OSC rising 0.1X
+
+  Data Path: M_RESET_B to I_FSM/cnt_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            14   1.222   0.958  M_RESET_B_IBUF (I_FSM/RstFSM_inv)
+     LUT4:I3->O            1   0.205   0.808  I_FSM/_n0179_SW0 (N5)
+     LUT6:I3->O            2   0.205   0.617  I_FSM/_n0179 (I_FSM/_n0179)
+     LUT4:I3->O            8   0.205   0.802  I_FSM/Mcount_cnt_val1 (I_FSM/Mcount_cnt_val)
+     FDRE:R                    0.430          I_FSM/cnt_0
+    ----------------------------------------
+    Total                      5.452ns (2.267ns logic, 3.185ns route)
+                                       (41.6% logic, 58.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'I_UART_top/tick'
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Offset:              4.723ns (Levels of Logic = 4)
+  Source:            FTDI_BDBUS<0> (PAD)
+  Destination:       I_UART_top/I_RX/Bit_1 (FF)
+  Destination Clock: I_UART_top/tick rising
+
+  Data Path: FTDI_BDBUS<0> to I_UART_top/I_RX/Bit_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.222   0.995  FTDI_BDBUS_0_IBUF (FTDI_BDBUS_0_IBUF)
+     LUT5:I0->O            6   0.203   0.745  I_UART_top/I_RX/counter[3]_Rx_AND_9_o11 (I_UART_top/I_RX/counter[3]_Rx_AND_9_o1)
+     LUT5:I4->O            4   0.205   1.048  I_UART_top/I_RX/_n01031 (I_UART_top/I_RX/_n0103)
+     LUT6:I0->O            1   0.203   0.000  I_UART_top/I_RX/Bit_1_rstpot (I_UART_top/I_RX/Bit_1_rstpot)
+     FD:D                      0.102          I_UART_top/I_RX/Bit_1
+    ----------------------------------------
+    Total                      4.723ns (1.935ns logic, 2.788ns route)
+                                       (41.0% logic, 59.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'M_CLK_OSC'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              3.762ns (Levels of Logic = 1)
+  Source:            I_FSM/AndEnable (FF)
+  Destination:       M_header<3> (PAD)
+  Source Clock:      M_CLK_OSC rising 0.1X
+
+  Data Path: I_FSM/AndEnable to M_header<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              6   0.447   0.744  I_FSM/AndEnable (I_FSM/AndEnable)
+     OBUF:I->O                 2.571          M_header_3_OBUF (M_header<3>)
+    ----------------------------------------
+    Total                      3.762ns (3.018ns logic, 0.744ns route)
+                                       (80.2% logic, 19.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock I_FSM/RstReceive
+------------------------------------+---------+---------+---------+---------+
+                                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------------+---------+---------+---------+---------+
+I_FSM/RstReceive                    |         |         |    2.452|         |
+I_SR_receive/GND_21_o_in[0]_AND_36_o|         |         |    2.401|         |
+I_SR_receive/GND_21_o_in[1]_AND_34_o|         |         |    2.367|         |
+I_SR_receive/GND_21_o_in[2]_AND_32_o|         |         |    2.367|         |
+I_SR_receive/GND_21_o_in[3]_AND_30_o|         |         |    2.367|         |
+I_SR_receive/GND_21_o_in[4]_AND_28_o|         |         |    2.367|         |
+I_SR_receive/GND_21_o_in[5]_AND_26_o|         |         |    2.367|         |
+I_SR_receive/GND_21_o_in[6]_AND_24_o|         |         |    2.367|         |
+I_SR_receive/GND_21_o_in[7]_AND_22_o|         |         |    2.367|         |
+M_CLK_OSC                           |         |         |    3.233|         |
+------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock I_SR_receive/GND_21_o_in[0]_AND_36_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+M_CLK_OSC      |         |         |    3.069|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock I_SR_receive/GND_21_o_in[1]_AND_34_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+M_CLK_OSC      |         |         |    3.069|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock I_SR_receive/GND_21_o_in[2]_AND_32_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+M_CLK_OSC      |         |         |    3.069|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock I_SR_receive/GND_21_o_in[3]_AND_30_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+M_CLK_OSC      |         |         |    3.069|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock I_SR_receive/GND_21_o_in[4]_AND_28_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+M_CLK_OSC      |         |         |    3.069|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock I_SR_receive/GND_21_o_in[5]_AND_26_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+M_CLK_OSC      |         |         |    3.069|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock I_SR_receive/GND_21_o_in[6]_AND_24_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+M_CLK_OSC      |         |         |    3.069|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock I_SR_receive/GND_21_o_in[7]_AND_22_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+M_CLK_OSC      |         |         |    3.069|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock I_SR_receive/GND_21_o_reg_mat[1][0]_AND_52_o
+------------------------------------+---------+---------+---------+---------+
+                                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------------+---------+---------+---------+---------+
+I_FSM/RstReceive                    |         |         |    2.414|         |
+I_SR_receive/GND_21_o_in[0]_AND_36_o|         |         |    2.363|         |
+M_CLK_OSC                           |         |         |    3.195|         |
+------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock I_SR_receive/GND_21_o_reg_mat[1][1]_AND_50_o
+------------------------------------+---------+---------+---------+---------+
+                                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------------+---------+---------+---------+---------+
+I_FSM/RstReceive                    |         |         |    2.380|         |
+I_SR_receive/GND_21_o_in[1]_AND_34_o|         |         |    2.329|         |
+M_CLK_OSC                           |         |         |    3.195|         |
+------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock I_SR_receive/GND_21_o_reg_mat[1][2]_AND_48_o
+------------------------------------+---------+---------+---------+---------+
+                                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------------+---------+---------+---------+---------+
+I_FSM/RstReceive                    |         |         |    2.380|         |
+I_SR_receive/GND_21_o_in[2]_AND_32_o|         |         |    2.329|         |
+M_CLK_OSC                           |         |         |    3.195|         |
+------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock I_SR_receive/GND_21_o_reg_mat[1][3]_AND_46_o
+------------------------------------+---------+---------+---------+---------+
+                                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------------+---------+---------+---------+---------+
+I_FSM/RstReceive                    |         |         |    2.380|         |
+I_SR_receive/GND_21_o_in[3]_AND_30_o|         |         |    2.329|         |
+M_CLK_OSC                           |         |         |    3.195|         |
+------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock I_SR_receive/GND_21_o_reg_mat[1][4]_AND_44_o
+------------------------------------+---------+---------+---------+---------+
+                                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------------+---------+---------+---------+---------+
+I_FSM/RstReceive                    |         |         |    2.380|         |
+I_SR_receive/GND_21_o_in[4]_AND_28_o|         |         |    2.329|         |
+M_CLK_OSC                           |         |         |    3.195|         |
+------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock I_SR_receive/GND_21_o_reg_mat[1][5]_AND_42_o
+------------------------------------+---------+---------+---------+---------+
+                                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------------+---------+---------+---------+---------+
+I_FSM/RstReceive                    |         |         |    2.380|         |
+I_SR_receive/GND_21_o_in[5]_AND_26_o|         |         |    2.329|         |
+M_CLK_OSC                           |         |         |    3.195|         |
+------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock I_SR_receive/GND_21_o_reg_mat[1][6]_AND_40_o
+------------------------------------+---------+---------+---------+---------+
+                                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------------+---------+---------+---------+---------+
+I_FSM/RstReceive                    |         |         |    2.380|         |
+I_SR_receive/GND_21_o_in[6]_AND_24_o|         |         |    2.329|         |
+M_CLK_OSC                           |         |         |    3.195|         |
+------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock I_SR_receive/GND_21_o_reg_mat[1][7]_AND_38_o
+------------------------------------+---------+---------+---------+---------+
+                                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------------+---------+---------+---------+---------+
+I_FSM/RstReceive                    |         |         |    2.380|         |
+I_SR_receive/GND_21_o_in[7]_AND_22_o|         |         |    2.329|         |
+M_CLK_OSC                           |         |         |    3.195|         |
+------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock I_UART_top/tick
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+I_UART_top/tick|    3.982|         |         |         |
+M_CLK_OSC      |    4.199|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock M_CLK_OSC
+--------------------------------------------+---------+---------+---------+---------+
+                                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------------+---------+---------+---------+---------+
+I_FSM/RstReceive                            |         |    2.692|         |         |
+I_SR_receive/GND_21_o_in[0]_AND_36_o        |         |    2.641|         |         |
+I_SR_receive/GND_21_o_reg_mat[1][0]_AND_52_o|         |    2.569|         |         |
+I_SR_receive/GND_21_o_reg_mat[1][1]_AND_50_o|         |    2.569|         |         |
+I_SR_receive/GND_21_o_reg_mat[1][2]_AND_48_o|         |    2.569|         |         |
+I_SR_receive/GND_21_o_reg_mat[1][3]_AND_46_o|         |    2.569|         |         |
+I_SR_receive/GND_21_o_reg_mat[1][4]_AND_44_o|         |    2.569|         |         |
+I_SR_receive/GND_21_o_reg_mat[1][5]_AND_42_o|         |    2.569|         |         |
+I_SR_receive/GND_21_o_reg_mat[1][6]_AND_40_o|         |    2.569|         |         |
+I_SR_receive/GND_21_o_reg_mat[1][7]_AND_38_o|         |    2.569|         |         |
+I_UART_top/tick                             |    4.847|         |         |         |
+M_CLK_OSC                                   |    5.206|         |         |         |
+--------------------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.23 secs
+ 
+--> 
+
+Total memory usage is 4516160 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   64 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

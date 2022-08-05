@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\ISE\2LUT-osiIN\FPGA_top.ncd
+OUTFILE=C:\ISE\2LUT-osiIN\FPGA_top.bit
+FAMILY=Automotive Spartan6
+PART=xa6slx75-3fgg484
+WORKINGDIR=C:\ISE\2LUT-osiIN
+LICENSE=WebPack
+USER_INFO=__0_0_0

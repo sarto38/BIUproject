@@ -1,0 +1,2 @@
+vhdtdtfi -lib work C:/ISE/MainProject2LUTnotOp/RingOscillator.v -lang verilog -prj MainProject -o RingOscillator.spl -module RingOscillator -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family aspartan6 RingOscillator.spl C:/ISE/MainProject2LUTnotOp/RingOscillator.sym 

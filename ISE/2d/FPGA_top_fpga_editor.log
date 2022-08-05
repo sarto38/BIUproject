@@ -1,0 +1,234 @@
+#:C89    
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 P.20131013
+#Current Working Directory:
+#:D   C:\ISE\MainProject2LUT
+#Date/Time:
+#:T   Thu Jul 23 16:46:35 2020
+#------------------------------
+	#Reading FPGA_top.ncd...
+	#Loading device for application Rf_Device from file '6slx75.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
+	#   "FPGA_top" is an NCD, version 3.2, device xa6slx75, package fgg484, speed -3
+	#Design creation date: 2020.07.23.12.12.29
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+setattr main edit-mode no-logic-changes
+	#2
+select -k comp 'I_AND/mid_reg<2>'
+	#3
+unselect comp 'I_AND/mid_reg<2>'
+	#4
+select -k comp 'I_AND/mid_reg<3>'
+	#5
+unselect comp 'I_AND/mid_reg<3>'
+	#6
+select -k comp 'I_AND/out<1>'
+	#7
+unselect comp 'I_AND/out<1>'
+	#8
+select -k comp 'I_AND/_n0031'
+	#9
+unselect comp 'I_AND/_n0031'
+	#10
+select -k comp 'I_FSM/AndEnable'
+	#11
+unselect comp 'I_FSM/AndEnable'
+	#12
+select -k comp 'I_FSM/cnt<3>'
+	#13
+unselect comp 'I_FSM/cnt<3>'
+	#14
+select -k comp 'I_FSM/AndEnable'
+	#15
+unselect comp 'I_FSM/AndEnable'
+	#16
+select -k comp 'I_AND/_n0031'
+	#17
+unselect comp 'I_AND/_n0031'
+	#18
+select -k comp 'I_AND/out<1>'
+	#19
+unselect comp 'I_AND/out<1>'
+	#20
+select -k comp 'I_AND/mid_reg<3>'
+	#21
+unselect comp 'I_AND/mid_reg<3>'
+	#22
+select -k comp 'I_AND/mid_reg<2>'
+	#23
+unselect comp 'I_AND/mid_reg<2>'
+	#24
+select -k comp 'I_AND/counter<1>'
+	#25
+unselect comp 'I_AND/counter<1>'
+	#26
+select -k comp 'FTDI_BDBUS<1>'
+	#27
+unselect comp 'FTDI_BDBUS<1>'
+	#28
+select -k comp 'FTDI_BDBUS<0>'
+	#29
+unselect comp 'FTDI_BDBUS<0>'
+	#30
+select -k comp 'FTDI_BDBUS<1>'
+	#31
+unselect comp 'FTDI_BDBUS<1>'
+	#32
+select -k comp 'I_AND/counter<1>'
+	#33
+unselect -all
+	#34
+select -k comp 'I_AND/counter<1>'
+	#35
+unselect comp 'I_AND/counter<1>'
+	#36
+select -k comp 'FTDI_BDBUS<1>'
+	#37
+unselect comp 'FTDI_BDBUS<1>'
+	#38
+select -k comp 'I_AND/counter<1>'
+	#39
+unselect -all
+	#40
+select -k comp 'I_AND/counter<1>'
+	#41
+unselect -all
+	#42
+select site 'SLICE_X13Y161'
+	#site "SLICE_X13Y161",  type = SLICEX  (RPM grid X39Y652)
+	#43
+unselect -all
+	#44
+select site 'SLICE_X13Y161'
+	#site "SLICE_X13Y161",  type = SLICEX  (RPM grid X39Y652)
+	#45
+post block
+	#<C5LUT>.
+	#<A5LUT>.
+	#<B5LUT>.
+	#<C5LUT>.
+	#<D5LUT>.
+	#<C5LUT>.
+	#<C5LUT>.
+	#<D5LUT>.
+	#46
+unselect -all
+	#47
+select site 'SLICE_X13Y162'
+	#site "SLICE_X13Y162",  type = SLICEX  (RPM grid X39Y656)
+	#48
+post block
+	#49
+unselect -all
+	#50
+select site 'SLICE_X12Y162'
+	#site "SLICE_X12Y162",  type = SLICEL  (RPM grid X37Y656)
+	#51
+unselect -all
+	#52
+select site 'SLICE_X12Y162'
+	#site "SLICE_X12Y162",  type = SLICEL  (RPM grid X37Y656)
+	#53
+unselect -all
+	#54
+select site 'SLICE_X12Y162'
+	#site "SLICE_X12Y162",  type = SLICEL  (RPM grid X37Y656)
+	#55
+post block
+	#<D5LUT>.
+	#56
+unselect -all
+	#57
+select site 'SLICE_X14Y161'
+	#site "SLICE_X14Y161",  type = SLICEM  (RPM grid X41Y652)
+	#58
+unselect -all
+	#59
+select site 'SLICE_X10Y161'
+	#site "SLICE_X10Y161",  type = SLICEM  (RPM grid X29Y652)
+	#60
+unselect -all
+	#61
+select site 'SLICE_X4Y161'
+	#site "SLICE_X4Y161",  type = SLICEL  (RPM grid X17Y652)
+	#62
+unselect -all
+	#63
+select site 'SLICE_X8Y161'
+	#site "SLICE_X8Y161",  type = SLICEL  (RPM grid X25Y652)
+	#64
+unselect -all
+	#65
+select site 'SLICE_X6Y161'
+	#site "SLICE_X6Y161",  type = SLICEM  (RPM grid X21Y652)
+	#66
+unselect -all
+	#67
+select site 'SLICE_X4Y161'
+	#site "SLICE_X4Y161",  type = SLICEL  (RPM grid X17Y652)
+	#68
+unselect -all
+	#69
+select site 'SLICE_X2Y161'
+	#site "SLICE_X2Y161",  type = SLICEM  (RPM grid X9Y652)
+	#70
+unselect -all
+	#71
+select site 'SLICE_X2Y160'
+	#site "SLICE_X2Y160",  type = SLICEM  (RPM grid X9Y648)
+	#72
+unselect -all
+	#73
+select site 'SLICE_X4Y161'
+	#site "SLICE_X4Y161",  type = SLICEL  (RPM grid X17Y652)
+	#74
+unselect -all
+	#75
+select site 'SLICE_X2Y115'
+	#site "SLICE_X2Y115",  type = SLICEM  (RPM grid X9Y468)
+	#76
+unselect -all
+	#77
+select site 'SLICE_X3Y115'
+	#site "SLICE_X3Y115",  type = SLICEX  (RPM grid X11Y468)
+	#78
+unselect -all
+	#79
+select site 'SLICE_X4Y115'
+	#site "SLICE_X4Y115",  type = SLICEL  (RPM grid X17Y468)
+	#80
+unselect -all
+	#81
+select site 'SLICE_X5Y115'
+	#site "SLICE_X5Y115",  type = SLICEX  (RPM grid X19Y468)
+	#82
+unselect -all
+	#83
+unselect -all
+	#84
+unselect -all
+	#85
+unselect -all
+	#86
+select site 'SLICE_X4Y114'
+	#site "SLICE_X4Y114",  type = SLICEL  (RPM grid X17Y464)
+	#87
+unselect -all
+	#88
+select site 'SLICE_X4Y114'
+	#site "SLICE_X4Y114",  type = SLICEL  (RPM grid X17Y464)
+	#89
+unselect -all
+	#90
+select site 'SLICE_X4Y114'
+	#site "SLICE_X4Y114",  type = SLICEL  (RPM grid X17Y464)
+	#91
+unselect -all
+	#92
+select site 'SLICE_X4Y114'
+	#site "SLICE_X4Y114",  type = SLICEL  (RPM grid X17Y464)
+	#93
+post block
+	#<A5LUT>.

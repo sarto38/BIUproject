@@ -1,0 +1,3 @@
+vhdl work "clk_4Mhz.vhd"
+verilog work "AND_com.v"
+verilog work "FPGA_top.v"

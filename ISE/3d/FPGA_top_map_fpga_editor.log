@@ -1,0 +1,87 @@
+#:C29    
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 P.20131013
+#Current Working Directory:
+#:D   C:\ISE\MainProject2LUT
+#Date/Time:
+#:T   Thu Jul 23 14:28:33 2020
+#------------------------------
+	#Reading FPGA_top_map.ncd...
+	#Loading device for application Rf_Device from file '6slx75.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
+	#   "FPGA_top" is an NCD, version 3.2, device xa6slx75, package fgg484, speed -3
+	#Design creation date: 2020.07.23.11.24.15
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+setattr main edit-mode no-logic-changes
+	#2
+unselect -all
+	#3
+unselect -all
+	#4
+post block
+	#ERROR:FPGAEditor:79 - The "post block" command without any other arguments cannot
+	#be performed unless the selection contains only a single site
+	#or single component.  Change the selection and try again.
+	#5
+unselect -all
+	#6
+unselect -all
+	#7
+unselect -all
+	#8
+unselect -all
+	#9
+select wire 'INPUT(3824,-8760)'
+	#node = INPUT(3824,-8760)
+	#10
+unselect -all
+	#11
+select wire 'INPUT(3824,-8760)'
+	#node = INPUT(3824,-8760)
+	#12
+post block
+	#ERROR:FPGAEditor:79 - The "post block" command without any other arguments cannot
+	#be performed unless the selection contains only a single site
+	#or single component.  Change the selection and try again.
+	#13
+unselect -all
+	#14
+select -k comp 'I_AND/out<1>'
+	#15
+unselect -all
+	#16
+select comp 'I_FSM/delay<3>'
+	#comp "I_FSM/delay<3>",  site "SLICE_X12Y155",  type = SLICEX  (RPM grid X37Y628)
+	#17
+unselect -all
+	#18
+select comp 'I_FSM/delay<3>'
+	#comp "I_FSM/delay<3>",  site "SLICE_X12Y155",  type = SLICEX  (RPM grid X37Y628)
+	#19
+post block
+	#20
+unselect comp 'I_FSM/delay<3>'
+	#21
+select -k comp 'I_AND/mid_reg<3>'
+	#22
+unselect -all
+	#23
+select comp 'I_AND/mid_reg<3>'
+	#comp "I_AND/mid_reg<3>",  site "SLICE_X13Y153",  type = SLICEX  (RPM grid X39Y620)
+	#24
+post block
+	#25
+setattr main disable_draw on
+	#26
+setattr layer components view off
+	#27
+setattr main disable_draw off
+	#Hint: change the visibility of more than one layer at a time by clicking on the apply button, clicking two or more layer buttons, and then clicking on the apply button again.
+	#28
+setattr main disable_draw on
+	#29
+setattr layer components view on
+	#30
+setattr main disable_draw off

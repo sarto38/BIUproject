@@ -1,0 +1,18 @@
+Creating log file C:\ISE\2LUT-combine\FPGA_top_xpa.log.
+Loading device for application Rf_Device from file '6slx75.nph' in environment
+C:\Xilinx\14.7\ISE_DS\ISE\.
+   "FPGA_top" is an NCD, version 3.2, device xa6slx75, package fgg484, speed -3
+
+INFO:Power:1691 - 
+   --------------------------------------------------------------
+                         The power estimate will be calculated using PRELIMINARY
+   data.
+   --------------------------------------------------------------
+
+Design load 20% completeDesign load 25% completeDesign load 30% completeDesign load 60% completeDesign load 95% completeDesign load 100% completeRunning Vector-less Activity Propagation
+........
+Finished Running Vector-less Activity Propagation
+Finished Running Vector-less Activity Propagation 0 secs 
+
+Design 'FPGA_top.ncd' and constraints 'FPGA_top.pcf' opened successfully
+

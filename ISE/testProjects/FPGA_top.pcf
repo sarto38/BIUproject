@@ -1,0 +1,71 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Dec 24 19:01:11 2020
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "M_header<1>" LOCATE = SITE "A5" LEVEL 1;
+COMP "FTDI_BDBUS<0>" LOCATE = SITE "V21" LEVEL 1;
+COMP "M_header<2>" LOCATE = SITE "B6" LEVEL 1;
+COMP "FTDI_BDBUS<1>" LOCATE = SITE "V22" LEVEL 1;
+COMP "M_header<3>" LOCATE = SITE "A6" LEVEL 1;
+COMP "M_RESET_B" LOCATE = SITE "A2" LEVEL 1;
+COMP "M_CLK_OSC" LOCATE = SITE "J1" LEVEL 1;
+COMP "M_header<0>" LOCATE = SITE "A4" LEVEL 1;
+TIMEGRP clk = BEL "I_UART_top/I_BAUDGEN/baudRateReg_2" BEL
+        "I_UART_top/I_BAUDGEN/baudRateReg_0" BEL
+        "I_UART_top/I_BAUDGEN/baudRateReg_1" BEL
+        "I_UART_top/I_BAUDGEN/baudRateReg_3" BEL
+        "I_UART_top/I_BAUDGEN/baudRateReg_4" BEL "I_UART_top/I_TX/R_edge_1"
+        BEL "I_UART_top/I_TX/R_edge_0" BEL "I_UART_top/I_TX/State" BEL
+        "I_UART_top/I_RX/State_FSM_FFd1" BEL "I_UART_top/I_RX/RxData_4" BEL
+        "I_UART_top/I_RX/RxData_3" BEL "I_UART_top/I_RX/RxData_2" BEL
+        "I_UART_top/I_RX/RxData_1" BEL "I_UART_top/I_RX/RxData_0" BEL
+        "I_FSM/delay_16" BEL "I_FSM/delay_15" BEL "I_FSM/delay_14" BEL
+        "I_FSM/delay_13" BEL "I_FSM/delay_12" BEL "I_FSM/delay_11" BEL
+        "I_FSM/delay_10" BEL "I_FSM/delay_9" BEL "I_FSM/delay_8" BEL
+        "I_FSM/delay_7" BEL "I_FSM/delay_6" BEL "I_FSM/delay_5" BEL
+        "I_FSM/delay_4" BEL "I_FSM/delay_3" BEL "I_FSM/delay_2" BEL
+        "I_FSM/delay_1" BEL "I_FSM/delay_0" BEL "I_FSM/State_FSM_FFd1" BEL
+        "I_FSM/State_FSM_FFd2" BEL "I_FSM/State_FSM_FFd3" BEL "I_FSM/cnt_7"
+        BEL "I_FSM/cnt_5" BEL "I_FSM/cnt_4" BEL "I_FSM/cnt_6" BEL
+        "I_FSM/cnt_3" BEL "I_FSM/cnt_2" BEL "I_FSM/cnt_0" BEL "I_FSM/cnt_1"
+        BEL "I_AND/counter_1" BEL "I_AND/counter_0" BEL "I_AND/out_0" BEL
+        "I_AND/out_1" BEL "I_AND/mid_reg_3" BEL "I_AND/mid_reg_2" BEL
+        "I_AND/mid_reg_1" BEL "I_AND/mid_reg_0" BEL "I_FSM/RstUART" BEL
+        "I_FSM/AndEnable" BEL "I_FSM/TxEn" BEL "I_FSM/RstTransmit" BEL
+        "I_AND/AndDone" BEL "I_FSM/SetTransmit" BEL "I_FSM/SetReceive";
+TIMEGRP newClk_clkdv = BEL "I_UART_top/I_BAUDGEN/baudRateReg_2" BEL
+        "I_UART_top/I_BAUDGEN/baudRateReg_0" BEL
+        "I_UART_top/I_BAUDGEN/baudRateReg_1" BEL
+        "I_UART_top/I_BAUDGEN/baudRateReg_3" BEL
+        "I_UART_top/I_BAUDGEN/baudRateReg_4" BEL "newClk/clkout1_buf" BEL
+        "I_UART_top/I_TX/R_edge_1" BEL "I_UART_top/I_TX/R_edge_0" BEL
+        "I_UART_top/I_TX/State" BEL "I_UART_top/I_RX/State_FSM_FFd1" BEL
+        "I_UART_top/I_RX/RxData_4" BEL "I_UART_top/I_RX/RxData_3" BEL
+        "I_UART_top/I_RX/RxData_2" BEL "I_UART_top/I_RX/RxData_1" BEL
+        "I_UART_top/I_RX/RxData_0" BEL "I_FSM/delay_16" BEL "I_FSM/delay_15"
+        BEL "I_FSM/delay_14" BEL "I_FSM/delay_13" BEL "I_FSM/delay_12" BEL
+        "I_FSM/delay_11" BEL "I_FSM/delay_10" BEL "I_FSM/delay_9" BEL
+        "I_FSM/delay_8" BEL "I_FSM/delay_7" BEL "I_FSM/delay_6" BEL
+        "I_FSM/delay_5" BEL "I_FSM/delay_4" BEL "I_FSM/delay_3" BEL
+        "I_FSM/delay_2" BEL "I_FSM/delay_1" BEL "I_FSM/delay_0" BEL
+        "I_FSM/State_FSM_FFd1" BEL "I_FSM/State_FSM_FFd2" BEL
+        "I_FSM/State_FSM_FFd3" BEL "I_FSM/cnt_7" BEL "I_FSM/cnt_5" BEL
+        "I_FSM/cnt_4" BEL "I_FSM/cnt_6" BEL "I_FSM/cnt_3" BEL "I_FSM/cnt_2"
+        BEL "I_FSM/cnt_0" BEL "I_FSM/cnt_1" BEL "I_AND/counter_1" BEL
+        "I_AND/counter_0" BEL "I_AND/out_0" BEL "I_AND/out_1" BEL
+        "I_AND/mid_reg_3" BEL "I_AND/mid_reg_2" BEL "I_AND/mid_reg_1" BEL
+        "I_AND/mid_reg_0" BEL "I_FSM/RstUART" BEL "I_FSM/AndEnable" BEL
+        "I_FSM/TxEn" BEL "I_FSM/RstTransmit" BEL "I_AND/AndDone" BEL
+        "I_FSM/SetTransmit" BEL "I_FSM/SetReceive";
+PIN SP6_BUFIO_INSERT_ML_BUFIO2_0_pins<0> = BEL "SP6_BUFIO_INSERT_ML_BUFIO2_0"
+        PINNAME DIVCLK;
+PIN newClk/dcm_sp_inst_pins<3> = BEL "newClk/dcm_sp_inst" PINNAME CLKIN;
+TIMEGRP CLK_OSC_GRP = PIN "SP6_BUFIO_INSERT_ML_BUFIO2_0_pins<0>" PIN
+        "newClk/dcm_sp_inst_pins<3>";
+TS_CLK_OSC = PERIOD TIMEGRP "CLK_OSC_GRP" 48 MHz HIGH 50%;
+TS_newClk_clkdv = PERIOD TIMEGRP "newClk_clkdv" TS_CLK_OSC / 12 HIGH 50%;
+PIN M_RESET_B_pins<0> = BEL "M_RESET_B" PINNAME PAD;
+PIN "M_RESET_B_pins<0>" TIG;
+SCHEMATIC END;
+
