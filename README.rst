@@ -2,9 +2,6 @@
 Masking on FPGAs - increasing it’s efficiency and security guaranties
 =====================================================================
 
-*Directory*
-=========
-
 Data
 ----
 All the traces collected from all modules.
