@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2022-07-23T21:37:02</DateModified>
+  <DateModified>2022-08-10T21:35:18</DateModified>
   <ModuleName>FPGA_top</ModuleName>
   <SummaryTimeStamp>2020-07-23T14:13:46</SummaryTimeStamp>
-  <SavedFilePath>C:/ISE/MainProject2LUTnotOpCorrect/iseconfig/FPGA_top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/ISE/MainProject2LUTnotOpCorrect\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/USER/Desktop/BIUproject/ISE/2d/iseconfig/FPGA_top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/USER/Desktop/BIUproject/ISE/2d\</ImplementationReportsDirectory>
   <DateInitialized>2020-05-26T15:57:59</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

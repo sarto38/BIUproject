@@ -55,6 +55,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="FPGA_top_pad.csv" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="FPGA_top_pad.txt" xil_pn:subbranch="Par"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="FPGA_top_par.xrpt"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="FPGA_top_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="FPGA_top_summary.html"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="FPGA_top_summary.xml"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="FPGA_top_usage.xml"/>
@@ -78,11 +79,31 @@
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1660156556" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1660156556">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1660156557" xil_pn:in_ck="5321366865606653083" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1660156556">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="AND2.v"/>
+      <outfile xil_pn:name="FPGA_top.v"/>
+      <outfile xil_pn:name="FSM.v"/>
+      <outfile xil_pn:name="RingOscillator.v"/>
+      <outfile xil_pn:name="SR_receive.v"/>
+      <outfile xil_pn:name="SR_transmit.v"/>
+      <outfile xil_pn:name="UART_baudrate_generator.v"/>
+      <outfile xil_pn:name="UART_rx.v"/>
+      <outfile xil_pn:name="UART_top.v"/>
+      <outfile xil_pn:name="UART_tx.v"/>
+      <outfile xil_pn:name="clk_4Mhz.vhd"/>
+    </transform>
     <transform xil_pn:end_ts="1595503242" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-2944168841671519789" xil_pn:start_ts="1595503242">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>

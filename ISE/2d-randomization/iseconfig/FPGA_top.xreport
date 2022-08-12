@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2022-07-29T00:59:53</DateModified>
+  <DateModified>2022-08-12T13:18:08</DateModified>
   <ModuleName>FPGA_top</ModuleName>
   <SummaryTimeStamp>2020-07-23T14:13:46</SummaryTimeStamp>
-  <SavedFilePath>C:/ISE/2LUT-osiIN/iseconfig/FPGA_top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/ISE/2LUT-osiIN\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/USER/Desktop/BIUproject/ISE/2d-randomization/iseconfig/FPGA_top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/USER/Desktop/BIUproject/ISE/2d-randomization\</ImplementationReportsDirectory>
   <DateInitialized>2020-05-26T15:57:59</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
