@@ -2,14 +2,14 @@ Command line:
    AND_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  55194
+     -socket  64096
 
-Fri Aug 12 14:26:04 2022
+Fri Sep 02 12:06:08 2022
 
 
- Elaboration Time: 0.09375 sec
+ Elaboration Time: 0.125 sec
 
- Current Memory Usage: 5154.6 Meg
+ Current Memory Usage: 5154.21 Meg
 
  Total Signals          : 56
  Total Nets             : 60
@@ -20,9 +20,9 @@ Fri Aug 12 14:26:04 2022
  Total Traceable Variables  : 105
  Total Scalar Nets and Variables : 1342
 
- Total Simulation Time: 0.21875 sec
+ Total Simulation Time: 0.25 sec
 
- Current Memory Usage: 4997.32 Meg
+ Current Memory Usage: 4839.63 Meg
 
-Fri Aug 12 14:27:09 2022
+Fri Sep 02 12:31:30 2022
 

@@ -121,7 +121,7 @@ for j in range(0, NoFiles, 1):
         print(np.hstack(sendx).astype(np.uint8), decoded_bytes)
 
         testNum = '{0:08b}'.format(sendNum)
-        testAnd = (int(testNum[0]) ^ int(testNum[1])) & (int(testNum[2]) ^ int(testNum[3]))
+        testAnd = (int(testNum[7]) ^ int(testNum[6])) & (int(testNum[5]) ^ int(testNum[4]))
         resultAndUART = '{0:08b}'.format(int(decoded_bytes))
 
         resultAnd = int(resultAndUART[0]) & int(resultAndUART[1])
