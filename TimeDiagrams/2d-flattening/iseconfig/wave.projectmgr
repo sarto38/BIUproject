@@ -76,13 +76,13 @@
          <ClosedNode>/AND_tb C:|ISE|wave|AND_tb.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>AND_tb (C:/Users/USER/Desktop/BIUproject/TimeDiagrams/2d-flattening/AND_tb.v)</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000000d6000000020000000000000000000000000200000064ffffffff000000810000000300000002000000d60000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>AND_tb (C:/Users/USER/Desktop/BIUproject/TimeDiagrams/2d-flattening/AND_tb.v)</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>

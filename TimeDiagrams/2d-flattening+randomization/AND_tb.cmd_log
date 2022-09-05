@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/USER/Desktop/BIUproject/TimeDiagrams/2d-flattening+randomization/AND_tb.xst" -ofn "C:/Users/USER/Desktop/BIUproject/TimeDiagrams/2d-flattening+randomization/AND_tb.syr" 

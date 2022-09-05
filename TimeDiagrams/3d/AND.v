@@ -10,24 +10,19 @@ module  AND #(parameter integer D = 3) (ina,inb,rin,AndEnable,AndDone,out,clk);
 	wire [2:0] out_wire;
 	reg [8:0] mid_reg;
 	reg  [1:0] counter = 2'b00;
-    input clk;
+   input clk;
 	output reg [0:D-1] out;
 	output reg AndDone = 0;
-	
 	integer ii=0;
 	
 	
-	wire os1;
-	wire os2;
-	wire os3;
-	wire os4;
 	
 	
 	(* DONT_TOUCH = "true" , LOCK_PINS="ALL" , KEEP_HIERARCHY = "TRUE" *) LUT6_2 # (
-    .INIT (64'h00AA00AA88877778)
+    .INIT (64'hCCCC0000956A6A6A)
     )And1(
-		  .O6(mid[1]),
-		  .O5(mid[0]),		
+	  .O6(mid[1]),
+	  .O5(mid[0]),		
         .I0(rin[0]),
         .I1(ina[0]),
         .I2(inb[1]),
@@ -36,11 +31,14 @@ module  AND #(parameter integer D = 3) (ina,inb,rin,AndEnable,AndDone,out,clk);
 		  .I5(1'b1)
     );
 	
+	
+	
+	
 	(*  DONT_TOUCH = "true" , LOCK_PINS="ALL" , KEEP_HIERARCHY = "TRUE" *) LUT6_2 # (
-    .INIT (64'h00AA00AA88877778)
+    .INIT (64'hCCCC0000956A6A6A)
     )And2(
-		  .O6(mid[3]),
-		  .O5(mid[2]),		
+		.O6(mid[3]),
+		.O5(mid[2]),		
         .I0(rin[1]),
         .I1(inb[2]),
         .I2(ina[0]),
@@ -50,10 +48,10 @@ module  AND #(parameter integer D = 3) (ina,inb,rin,AndEnable,AndDone,out,clk);
     );
 
 	 (* DONT_TOUCH = "true" , LOCK_PINS="ALL" , KEEP_HIERARCHY = "TRUE" *) LUT6_2 # (
-    .INIT (64'h00AA00AA88877778)
+    .INIT (64'hCCCC0000956A6A6A)
     )And3(
-		  .O6(mid[5]),
-		  .O5(mid[4]),		
+		.O6(mid[5]),
+		.O5(mid[4]),		
         .I0(rin[2]),
         .I1(ina[1]),
         .I2(inb[2]),
@@ -65,9 +63,9 @@ module  AND #(parameter integer D = 3) (ina,inb,rin,AndEnable,AndDone,out,clk);
 	assign mid[7] = rin[1];
 	assign mid[8] = rin[2];
 	
+	
 		always @(posedge clk)
 	begin
-	
 	for(ii=0; ii<9; ii=ii+1)
 		mid_reg[ii] <= mid[ii];
 	if(AndEnable == 1)
@@ -92,7 +90,7 @@ module  AND #(parameter integer D = 3) (ina,inb,rin,AndEnable,AndDone,out,clk);
 	end
 	end
 	(* DONT_TOUCH = "true" , LOCK_PINS="ALL" , KEEP_HIERARCHY = "TRUE" *) LUT6_2 # (
-    .INIT (64'h0000000096969696)
+    .INIT (64'h9696969696969696)
     )And5(
         .O5(out_wire[0]), 
 		  .I0(mid_reg[0]),
@@ -102,17 +100,30 @@ module  AND #(parameter integer D = 3) (ina,inb,rin,AndEnable,AndDone,out,clk);
         .I4(1'b1),
 		  .I5(1'b1)
     );
-	 	(*  DONT_TOUCH = "true" , LOCK_PINS="ALL" , KEEP_HIERARCHY = "TRUE" *) LUT6_2 # (
+	 	 	(*  DONT_TOUCH = "true" , LOCK_PINS="ALL" , KEEP_HIERARCHY = "TRUE" *) LUT6_2 # (
     .INIT (64'h9696969696969696)
     )And6(
-		  .O6(out_wire[2]),
+        .O5(out_wire[2]), 
+		  .I0(mid_reg[3]),
+        .I1(mid_reg[7]),
+        .I2(mid_reg[8]),
+        .I3(1'b1),
+        .I4(1'b1),
+		  .I5(1'b1)
+    );
+	 
+	 	(*  DONT_TOUCH = "true" , LOCK_PINS="ALL" , KEEP_HIERARCHY = "TRUE" *) LUT6_2 # (
+    .INIT (64'h9696969696969696)
+    )And7(
         .O5(out_wire[1]), 
 		  .I0(mid_reg[6]),
         .I1(mid_reg[4]),
         .I2(mid_reg[5]),
-        .I3(mid_reg[3]),
-        .I4(mid_reg[7]),
-		  .I5(mid_reg[8])
+        .I3(1'b1),
+        .I4(1'b1),
+		  .I5(1'b1)
     );
+		
+		
 		
 endmodule

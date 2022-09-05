@@ -68,19 +68,19 @@ Timing constraint: TS_newClk_clkdv = PERIOD TIMEGRP "newClk_clkdv" TS_CLK_OSC /
 12 HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 401 paths analyzed, 135 endpoints analyzed, 0 failing endpoints
+ 395 paths analyzed, 138 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   4.099ns.
+ Minimum period is   3.626ns.
 --------------------------------------------------------------------------------
 
-Paths for end point I_UART_top/I_BAUDGEN/baudRateReg_3 (SLICE_X31Y120.SR), 1 path
+Paths for end point I_FSM/RstUART (SLICE_X30Y130.SR), 2 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     245.901ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               I_FSM/RstUART (FF)
-  Destination:          I_UART_top/I_BAUDGEN/baudRateReg_3 (FF)
+Slack (setup path):     246.374ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               I_FSM/State_FSM_FFd1 (FF)
+  Destination:          I_FSM/RstUART (FF)
   Requirement:          250.000ns
-  Data Path Delay:      4.115ns (Levels of Logic = 1)
-  Clock Path Skew:      0.201ns (0.960 - 0.759)
+  Data Path Delay:      3.408ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.033ns (0.729 - 0.762)
   Source Clock:         clk rising at 0.000ns
   Destination Clock:    clk rising at 250.000ns
   Clock Uncertainty:    0.185ns
@@ -91,32 +91,29 @@ Slack (setup path):     245.901ns (requirement - (data path - clock path skew + 
     Discrete Jitter (DJ):       0.300ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: I_FSM/RstUART to I_UART_top/I_BAUDGEN/baudRateReg_3
+  Maximum Data Path at Slow Process Corner: I_FSM/State_FSM_FFd1 to I_FSM/RstUART
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X16Y149.AMUX   Tshcko                0.455   N3
+    SLICE_X18Y148.AQ     Tcko                  0.447   I_FSM/State_FSM_FFd2
+                                                       I_FSM/State_FSM_FFd1
+    SLICE_X18Y147.D5     net (fanout=10)       0.407   I_FSM/State_FSM_FFd1
+    SLICE_X18Y147.D      Tilo                  0.203   I_FSM/AndEnable
+                                                       I_FSM/_n01291
+    SLICE_X30Y130.SR     net (fanout=2)        1.926   I_FSM/_n0129
+    SLICE_X30Y130.CLK    Tsrck                 0.425   I_FSM/RstUART
                                                        I_FSM/RstUART
-    SLICE_X29Y125.A3     net (fanout=7)        2.379   I_FSM/RstUART
-    SLICE_X29Y125.A      Tilo                  0.259   I_UART_top/I_RX/Rst_n_inv
-                                                       RstUART_inv1_INV_0
-    SLICE_X31Y120.SR     net (fanout=4)        0.709   I_UART_top/I_RX/Rst_n_inv
-    SLICE_X31Y120.CLK    Trck                  0.313   I_UART_top/I_BAUDGEN/baudRateReg<3>
-                                                       I_UART_top/I_BAUDGEN/baudRateReg_3
     -------------------------------------------------  ---------------------------
-    Total                                      4.115ns (1.027ns logic, 3.088ns route)
-                                                       (25.0% logic, 75.0% route)
+    Total                                      3.408ns (1.075ns logic, 2.333ns route)
+                                                       (31.5% logic, 68.5% route)
 
 --------------------------------------------------------------------------------
-
-Paths for end point I_UART_top/I_BAUDGEN/baudRateReg_0 (SLICE_X31Y120.SR), 1 path
---------------------------------------------------------------------------------
-Slack (setup path):     245.912ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               I_FSM/RstUART (FF)
-  Destination:          I_UART_top/I_BAUDGEN/baudRateReg_0 (FF)
+Slack (setup path):     246.440ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               I_FSM/State_FSM_FFd2 (FF)
+  Destination:          I_FSM/RstUART (FF)
   Requirement:          250.000ns
-  Data Path Delay:      4.104ns (Levels of Logic = 1)
-  Clock Path Skew:      0.201ns (0.960 - 0.759)
+  Data Path Delay:      3.342ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.033ns (0.729 - 0.762)
   Source Clock:         clk rising at 0.000ns
   Destination Clock:    clk rising at 250.000ns
   Clock Uncertainty:    0.185ns
@@ -127,32 +124,32 @@ Slack (setup path):     245.912ns (requirement - (data path - clock path skew + 
     Discrete Jitter (DJ):       0.300ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: I_FSM/RstUART to I_UART_top/I_BAUDGEN/baudRateReg_0
+  Maximum Data Path at Slow Process Corner: I_FSM/State_FSM_FFd2 to I_FSM/RstUART
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X16Y149.AMUX   Tshcko                0.455   N3
+    SLICE_X18Y148.BQ     Tcko                  0.447   I_FSM/State_FSM_FFd2
+                                                       I_FSM/State_FSM_FFd2
+    SLICE_X18Y147.D6     net (fanout=12)       0.341   I_FSM/State_FSM_FFd2
+    SLICE_X18Y147.D      Tilo                  0.203   I_FSM/AndEnable
+                                                       I_FSM/_n01291
+    SLICE_X30Y130.SR     net (fanout=2)        1.926   I_FSM/_n0129
+    SLICE_X30Y130.CLK    Tsrck                 0.425   I_FSM/RstUART
                                                        I_FSM/RstUART
-    SLICE_X29Y125.A3     net (fanout=7)        2.379   I_FSM/RstUART
-    SLICE_X29Y125.A      Tilo                  0.259   I_UART_top/I_RX/Rst_n_inv
-                                                       RstUART_inv1_INV_0
-    SLICE_X31Y120.SR     net (fanout=4)        0.709   I_UART_top/I_RX/Rst_n_inv
-    SLICE_X31Y120.CLK    Trck                  0.302   I_UART_top/I_BAUDGEN/baudRateReg<3>
-                                                       I_UART_top/I_BAUDGEN/baudRateReg_0
     -------------------------------------------------  ---------------------------
-    Total                                      4.104ns (1.016ns logic, 3.088ns route)
-                                                       (24.8% logic, 75.2% route)
+    Total                                      3.342ns (1.075ns logic, 2.267ns route)
+                                                       (32.2% logic, 67.8% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point I_UART_top/I_BAUDGEN/baudRateReg_2 (SLICE_X31Y120.SR), 1 path
+Paths for end point I_FSM/cnt_5 (SLICE_X20Y148.SR), 14 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     245.925ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               I_FSM/RstUART (FF)
-  Destination:          I_UART_top/I_BAUDGEN/baudRateReg_2 (FF)
+Slack (setup path):     246.408ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               I_FSM/cnt_4 (FF)
+  Destination:          I_FSM/cnt_5 (FF)
   Requirement:          250.000ns
-  Data Path Delay:      4.091ns (Levels of Logic = 1)
-  Clock Path Skew:      0.201ns (0.960 - 0.759)
+  Data Path Delay:      3.407ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
   Source Clock:         clk rising at 0.000ns
   Destination Clock:    clk rising at 250.000ns
   Clock Uncertainty:    0.185ns
@@ -163,106 +160,312 @@ Slack (setup path):     245.925ns (requirement - (data path - clock path skew + 
     Discrete Jitter (DJ):       0.300ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: I_FSM/RstUART to I_UART_top/I_BAUDGEN/baudRateReg_2
+  Maximum Data Path at Slow Process Corner: I_FSM/cnt_4 to I_FSM/cnt_5
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X16Y149.AMUX   Tshcko                0.455   N3
-                                                       I_FSM/RstUART
-    SLICE_X29Y125.A3     net (fanout=7)        2.379   I_FSM/RstUART
-    SLICE_X29Y125.A      Tilo                  0.259   I_UART_top/I_RX/Rst_n_inv
-                                                       RstUART_inv1_INV_0
-    SLICE_X31Y120.SR     net (fanout=4)        0.709   I_UART_top/I_RX/Rst_n_inv
-    SLICE_X31Y120.CLK    Trck                  0.289   I_UART_top/I_BAUDGEN/baudRateReg<3>
-                                                       I_UART_top/I_BAUDGEN/baudRateReg_2
+    SLICE_X20Y148.AQ     Tcko                  0.408   I_FSM/cnt<7>
+                                                       I_FSM/cnt_4
+    SLICE_X21Y148.D1     net (fanout=2)        0.773   I_FSM/cnt<4>
+    SLICE_X21Y148.D      Tilo                  0.259   I_FSM/flag
+                                                       I_FSM/n00061
+    SLICE_X18Y147.A3     net (fanout=4)        0.508   I_FSM/n00061
+    SLICE_X18Y147.A      Tilo                  0.203   I_FSM/AndEnable
+                                                       I_FSM/_n0179
+    SLICE_X18Y147.B6     net (fanout=2)        0.124   I_FSM/_n0179
+    SLICE_X18Y147.B      Tilo                  0.203   I_FSM/AndEnable
+                                                       I_FSM/Mcount_cnt_val1
+    SLICE_X20Y148.SR     net (fanout=2)        0.474   I_FSM/Mcount_cnt_val
+    SLICE_X20Y148.CLK    Tsrck                 0.455   I_FSM/cnt<7>
+                                                       I_FSM/cnt_5
     -------------------------------------------------  ---------------------------
-    Total                                      4.091ns (1.003ns logic, 3.088ns route)
-                                                       (24.5% logic, 75.5% route)
+    Total                                      3.407ns (1.528ns logic, 1.879ns route)
+                                                       (44.8% logic, 55.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     246.687ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               I_FSM/cnt_2 (FF)
+  Destination:          I_FSM/cnt_5 (FF)
+  Requirement:          250.000ns
+  Data Path Delay:      3.117ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.011ns (0.144 - 0.155)
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 250.000ns
+  Clock Uncertainty:    0.185ns
+
+  Clock Uncertainty:          0.185ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: I_FSM/cnt_2 to I_FSM/cnt_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y147.CQ     Tcko                  0.408   I_FSM/cnt<3>
+                                                       I_FSM/cnt_2
+    SLICE_X21Y148.D3     net (fanout=2)        0.483   I_FSM/cnt<2>
+    SLICE_X21Y148.D      Tilo                  0.259   I_FSM/flag
+                                                       I_FSM/n00061
+    SLICE_X18Y147.A3     net (fanout=4)        0.508   I_FSM/n00061
+    SLICE_X18Y147.A      Tilo                  0.203   I_FSM/AndEnable
+                                                       I_FSM/_n0179
+    SLICE_X18Y147.B6     net (fanout=2)        0.124   I_FSM/_n0179
+    SLICE_X18Y147.B      Tilo                  0.203   I_FSM/AndEnable
+                                                       I_FSM/Mcount_cnt_val1
+    SLICE_X20Y148.SR     net (fanout=2)        0.474   I_FSM/Mcount_cnt_val
+    SLICE_X20Y148.CLK    Tsrck                 0.455   I_FSM/cnt<7>
+                                                       I_FSM/cnt_5
+    -------------------------------------------------  ---------------------------
+    Total                                      3.117ns (1.528ns logic, 1.589ns route)
+                                                       (49.0% logic, 51.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     246.748ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               I_FSM/cnt_5 (FF)
+  Destination:          I_FSM/cnt_5 (FF)
+  Requirement:          250.000ns
+  Data Path Delay:      3.067ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 250.000ns
+  Clock Uncertainty:    0.185ns
+
+  Clock Uncertainty:          0.185ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: I_FSM/cnt_5 to I_FSM/cnt_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y148.BQ     Tcko                  0.408   I_FSM/cnt<7>
+                                                       I_FSM/cnt_5
+    SLICE_X21Y148.D2     net (fanout=2)        0.433   I_FSM/cnt<5>
+    SLICE_X21Y148.D      Tilo                  0.259   I_FSM/flag
+                                                       I_FSM/n00061
+    SLICE_X18Y147.A3     net (fanout=4)        0.508   I_FSM/n00061
+    SLICE_X18Y147.A      Tilo                  0.203   I_FSM/AndEnable
+                                                       I_FSM/_n0179
+    SLICE_X18Y147.B6     net (fanout=2)        0.124   I_FSM/_n0179
+    SLICE_X18Y147.B      Tilo                  0.203   I_FSM/AndEnable
+                                                       I_FSM/Mcount_cnt_val1
+    SLICE_X20Y148.SR     net (fanout=2)        0.474   I_FSM/Mcount_cnt_val
+    SLICE_X20Y148.CLK    Tsrck                 0.455   I_FSM/cnt<7>
+                                                       I_FSM/cnt_5
+    -------------------------------------------------  ---------------------------
+    Total                                      3.067ns (1.528ns logic, 1.539ns route)
+                                                       (49.8% logic, 50.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point I_FSM/cnt_4 (SLICE_X20Y148.SR), 14 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     246.419ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               I_FSM/cnt_4 (FF)
+  Destination:          I_FSM/cnt_4 (FF)
+  Requirement:          250.000ns
+  Data Path Delay:      3.396ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 250.000ns
+  Clock Uncertainty:    0.185ns
+
+  Clock Uncertainty:          0.185ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: I_FSM/cnt_4 to I_FSM/cnt_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y148.AQ     Tcko                  0.408   I_FSM/cnt<7>
+                                                       I_FSM/cnt_4
+    SLICE_X21Y148.D1     net (fanout=2)        0.773   I_FSM/cnt<4>
+    SLICE_X21Y148.D      Tilo                  0.259   I_FSM/flag
+                                                       I_FSM/n00061
+    SLICE_X18Y147.A3     net (fanout=4)        0.508   I_FSM/n00061
+    SLICE_X18Y147.A      Tilo                  0.203   I_FSM/AndEnable
+                                                       I_FSM/_n0179
+    SLICE_X18Y147.B6     net (fanout=2)        0.124   I_FSM/_n0179
+    SLICE_X18Y147.B      Tilo                  0.203   I_FSM/AndEnable
+                                                       I_FSM/Mcount_cnt_val1
+    SLICE_X20Y148.SR     net (fanout=2)        0.474   I_FSM/Mcount_cnt_val
+    SLICE_X20Y148.CLK    Tsrck                 0.444   I_FSM/cnt<7>
+                                                       I_FSM/cnt_4
+    -------------------------------------------------  ---------------------------
+    Total                                      3.396ns (1.517ns logic, 1.879ns route)
+                                                       (44.7% logic, 55.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     246.698ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               I_FSM/cnt_2 (FF)
+  Destination:          I_FSM/cnt_4 (FF)
+  Requirement:          250.000ns
+  Data Path Delay:      3.106ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.011ns (0.144 - 0.155)
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 250.000ns
+  Clock Uncertainty:    0.185ns
+
+  Clock Uncertainty:          0.185ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: I_FSM/cnt_2 to I_FSM/cnt_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y147.CQ     Tcko                  0.408   I_FSM/cnt<3>
+                                                       I_FSM/cnt_2
+    SLICE_X21Y148.D3     net (fanout=2)        0.483   I_FSM/cnt<2>
+    SLICE_X21Y148.D      Tilo                  0.259   I_FSM/flag
+                                                       I_FSM/n00061
+    SLICE_X18Y147.A3     net (fanout=4)        0.508   I_FSM/n00061
+    SLICE_X18Y147.A      Tilo                  0.203   I_FSM/AndEnable
+                                                       I_FSM/_n0179
+    SLICE_X18Y147.B6     net (fanout=2)        0.124   I_FSM/_n0179
+    SLICE_X18Y147.B      Tilo                  0.203   I_FSM/AndEnable
+                                                       I_FSM/Mcount_cnt_val1
+    SLICE_X20Y148.SR     net (fanout=2)        0.474   I_FSM/Mcount_cnt_val
+    SLICE_X20Y148.CLK    Tsrck                 0.444   I_FSM/cnt<7>
+                                                       I_FSM/cnt_4
+    -------------------------------------------------  ---------------------------
+    Total                                      3.106ns (1.517ns logic, 1.589ns route)
+                                                       (48.8% logic, 51.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     246.759ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               I_FSM/cnt_5 (FF)
+  Destination:          I_FSM/cnt_4 (FF)
+  Requirement:          250.000ns
+  Data Path Delay:      3.056ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 250.000ns
+  Clock Uncertainty:    0.185ns
+
+  Clock Uncertainty:          0.185ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: I_FSM/cnt_5 to I_FSM/cnt_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y148.BQ     Tcko                  0.408   I_FSM/cnt<7>
+                                                       I_FSM/cnt_5
+    SLICE_X21Y148.D2     net (fanout=2)        0.433   I_FSM/cnt<5>
+    SLICE_X21Y148.D      Tilo                  0.259   I_FSM/flag
+                                                       I_FSM/n00061
+    SLICE_X18Y147.A3     net (fanout=4)        0.508   I_FSM/n00061
+    SLICE_X18Y147.A      Tilo                  0.203   I_FSM/AndEnable
+                                                       I_FSM/_n0179
+    SLICE_X18Y147.B6     net (fanout=2)        0.124   I_FSM/_n0179
+    SLICE_X18Y147.B      Tilo                  0.203   I_FSM/AndEnable
+                                                       I_FSM/Mcount_cnt_val1
+    SLICE_X20Y148.SR     net (fanout=2)        0.474   I_FSM/Mcount_cnt_val
+    SLICE_X20Y148.CLK    Tsrck                 0.444   I_FSM/cnt<7>
+                                                       I_FSM/cnt_4
+    -------------------------------------------------  ---------------------------
+    Total                                      3.056ns (1.517ns logic, 1.539ns route)
+                                                       (49.6% logic, 50.4% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: TS_newClk_clkdv = PERIOD TIMEGRP "newClk_clkdv" TS_CLK_OSC / 12 HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point I_AND/counter_1 (SLICE_X14Y155.CE), 1 path
+Paths for end point I_UART_top/I_BAUDGEN/baudRateReg_0 (SLICE_X31Y125.A6), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.336ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               I_FSM/AndEnable (FF)
-  Destination:          I_AND/counter_1 (FF)
+Slack (hold path):      0.307ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               I_UART_top/I_BAUDGEN/baudRateReg_4 (FF)
+  Destination:          I_UART_top/I_BAUDGEN/baudRateReg_0 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.345ns (Levels of Logic = 0)
-  Clock Path Skew:      0.009ns (0.042 - 0.033)
+  Data Path Delay:      0.550ns (Levels of Logic = 1)
+  Clock Path Skew:      0.243ns (0.704 - 0.461)
   Source Clock:         clk rising at 250.000ns
   Destination Clock:    clk rising at 250.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: I_FSM/AndEnable to I_AND/counter_1
+  Minimum Data Path at Fast Process Corner: I_UART_top/I_BAUDGEN/baudRateReg_4 to I_UART_top/I_BAUDGEN/baudRateReg_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X15Y152.CQ     Tcko                  0.198   I_FSM/AndEnable
-                                                       I_FSM/AndEnable
-    SLICE_X14Y155.CE     net (fanout=4)        0.249   I_FSM/AndEnable
-    SLICE_X14Y155.CLK    Tckce       (-Th)     0.102   I_AND/counter<1>
-                                                       I_AND/counter_1
+    SLICE_X31Y126.AQ     Tcko                  0.198   I_UART_top/I_BAUDGEN/baudRateReg<4>
+                                                       I_UART_top/I_BAUDGEN/baudRateReg_4
+    SLICE_X31Y125.A6     net (fanout=7)        0.137   I_UART_top/I_BAUDGEN/baudRateReg<4>
+    SLICE_X31Y125.CLK    Tah         (-Th)    -0.215   I_UART_top/I_BAUDGEN/baudRateReg<3>
+                                                       I_UART_top/I_BAUDGEN/Mcount_baudRateReg_eqn_01
+                                                       I_UART_top/I_BAUDGEN/baudRateReg_0
     -------------------------------------------------  ---------------------------
-    Total                                      0.345ns (0.096ns logic, 0.249ns route)
-                                                       (27.8% logic, 72.2% route)
+    Total                                      0.550ns (0.413ns logic, 0.137ns route)
+                                                       (75.1% logic, 24.9% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point I_AND/counter_0 (SLICE_X14Y155.CE), 1 path
+Paths for end point I_UART_top/I_BAUDGEN/baudRateReg_1 (SLICE_X31Y125.B6), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.346ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               I_FSM/AndEnable (FF)
-  Destination:          I_AND/counter_0 (FF)
+Slack (hold path):      0.307ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               I_UART_top/I_BAUDGEN/baudRateReg_4 (FF)
+  Destination:          I_UART_top/I_BAUDGEN/baudRateReg_1 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.355ns (Levels of Logic = 0)
-  Clock Path Skew:      0.009ns (0.042 - 0.033)
+  Data Path Delay:      0.550ns (Levels of Logic = 1)
+  Clock Path Skew:      0.243ns (0.704 - 0.461)
   Source Clock:         clk rising at 250.000ns
   Destination Clock:    clk rising at 250.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: I_FSM/AndEnable to I_AND/counter_0
+  Minimum Data Path at Fast Process Corner: I_UART_top/I_BAUDGEN/baudRateReg_4 to I_UART_top/I_BAUDGEN/baudRateReg_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X15Y152.CQ     Tcko                  0.198   I_FSM/AndEnable
-                                                       I_FSM/AndEnable
-    SLICE_X14Y155.CE     net (fanout=4)        0.249   I_FSM/AndEnable
-    SLICE_X14Y155.CLK    Tckce       (-Th)     0.092   I_AND/counter<1>
-                                                       I_AND/counter_0
+    SLICE_X31Y126.AQ     Tcko                  0.198   I_UART_top/I_BAUDGEN/baudRateReg<4>
+                                                       I_UART_top/I_BAUDGEN/baudRateReg_4
+    SLICE_X31Y125.B6     net (fanout=7)        0.137   I_UART_top/I_BAUDGEN/baudRateReg<4>
+    SLICE_X31Y125.CLK    Tah         (-Th)    -0.215   I_UART_top/I_BAUDGEN/baudRateReg<3>
+                                                       I_UART_top/I_BAUDGEN/Mcount_baudRateReg_eqn_11
+                                                       I_UART_top/I_BAUDGEN/baudRateReg_1
     -------------------------------------------------  ---------------------------
-    Total                                      0.355ns (0.106ns logic, 0.249ns route)
-                                                       (29.9% logic, 70.1% route)
+    Total                                      0.550ns (0.413ns logic, 0.137ns route)
+                                                       (75.1% logic, 24.9% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point I_FSM/delay_0 (SLICE_X17Y152.A6), 1 path
+Paths for end point I_FSM/Triger (SLICE_X20Y149.A6), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.442ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               I_FSM/delay_0 (FF)
-  Destination:          I_FSM/delay_0 (FF)
+Slack (hold path):      0.416ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               I_FSM/Triger (FF)
+  Destination:          I_FSM/Triger (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.442ns (Levels of Logic = 1)
+  Data Path Delay:      0.416ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         clk rising at 250.000ns
   Destination Clock:    clk rising at 250.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: I_FSM/delay_0 to I_FSM/delay_0
+  Minimum Data Path at Fast Process Corner: I_FSM/Triger to I_FSM/Triger
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y152.AQ     Tcko                  0.198   I_FSM/delay<3>
-                                                       I_FSM/delay_0
-    SLICE_X17Y152.A6     net (fanout=3)        0.029   I_FSM/delay<0>
-    SLICE_X17Y152.CLK    Tah         (-Th)    -0.215   I_FSM/delay<3>
-                                                       I_FSM/Mcount_delay_xor<0>11_INV_0
-                                                       I_FSM/delay_0
+    SLICE_X20Y149.AQ     Tcko                  0.200   I_FSM/Triger
+                                                       I_FSM/Triger
+    SLICE_X20Y149.A6     net (fanout=2)        0.026   I_FSM/Triger
+    SLICE_X20Y149.CLK    Tah         (-Th)    -0.190   I_FSM/Triger
+                                                       I_FSM/Triger_rstpot
+                                                       I_FSM/Triger
     -------------------------------------------------  ---------------------------
-    Total                                      0.442ns (0.413ns logic, 0.029ns route)
-                                                       (93.4% logic, 6.6% route)
+    Total                                      0.416ns (0.390ns logic, 0.026ns route)
+                                                       (93.8% logic, 6.3% route)
 
 --------------------------------------------------------------------------------
 
@@ -281,7 +484,7 @@ Slack: 249.570ns (period - min period limit)
   Min period limit: 0.430ns (2325.581MHz) (Tcp)
   Physical resource: I_FSM/cnt<3>/CLK
   Logical resource: I_FSM/cnt_0/CK
-  Location pin: SLICE_X16Y150.CLK
+  Location pin: SLICE_X20Y147.CLK
   Clock network: clk
 --------------------------------------------------------------------------------
 Slack: 249.570ns (period - min period limit)
@@ -289,7 +492,7 @@ Slack: 249.570ns (period - min period limit)
   Min period limit: 0.430ns (2325.581MHz) (Tcp)
   Physical resource: I_FSM/cnt<3>/CLK
   Logical resource: I_FSM/cnt_1/CK
-  Location pin: SLICE_X16Y150.CLK
+  Location pin: SLICE_X20Y147.CLK
   Clock network: clk
 --------------------------------------------------------------------------------
 
@@ -301,8 +504,8 @@ Derived Constraints for TS_CLK_OSC
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_CLK_OSC                     |     20.833ns|     16.000ns|      0.342ns|            0|            0|            0|          401|
-| TS_newClk_clkdv               |    250.000ns|      4.099ns|          N/A|            0|            0|          401|            0|
+|TS_CLK_OSC                     |     20.833ns|     16.000ns|      0.302ns|            0|            0|            0|          395|
+| TS_newClk_clkdv               |    250.000ns|      3.626ns|          N/A|            0|            0|          395|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 All constraints were met.
@@ -317,7 +520,7 @@ Clock to Setup on destination clock M_CLK_OSC
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-M_CLK_OSC      |    4.099|         |         |         |
+M_CLK_OSC      |    3.626|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -326,7 +529,7 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 401 paths, 0 nets, and 157 connections
+Constraints cover 395 paths, 0 nets, and 155 connections
 
 Design statistics:
    Minimum period:  16.000ns{1}   (Maximum frequency:  62.500MHz)
@@ -335,14 +538,14 @@ Design statistics:
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Fri Nov 13 11:30:53 2020 
+Analysis completed Tue Sep 06 00:27:30 2022 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 4635 MB
+Peak Memory Usage: 4638 MB
 
 
 

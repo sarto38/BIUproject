@@ -256,3 +256,9 @@ trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FPGA_top.twx FPGA_top.ncd -o F
 bitgen -intstyle ise -f FPGA_top.ut FPGA_top.ncd 
 xst -intstyle ise -ifn "C:/ISE/3LUt/FPGA_top.xst" -ofn "C:/ISE/3LUt/FPGA_top.syr" 
 xst -intstyle ise -ifn "C:/ISE/3LUt/FPGA_top.xst" -ofn "C:/ISE/3LUt/FPGA_top.syr" 
+xst -intstyle ise -ifn "C:/Users/USER/Desktop/BIUproject/ISE/3d/FPGA_top.xst" -ofn "C:/Users/USER/Desktop/BIUproject/ISE/3d/FPGA_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FPGA_top.ucf -p xa6slx75-fgg484-3 FPGA_top.ngc FPGA_top.ngd  
+map -intstyle ise -p xa6slx75-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FPGA_top_map.ncd FPGA_top.ngd FPGA_top.pcf 
+par -w -intstyle ise -ol high -mt off FPGA_top_map.ncd FPGA_top.ncd FPGA_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FPGA_top.twx FPGA_top.ncd -o FPGA_top.twr FPGA_top.pcf -ucf FPGA_top.ucf 
+bitgen -intstyle ise -f FPGA_top.ut FPGA_top.ncd 

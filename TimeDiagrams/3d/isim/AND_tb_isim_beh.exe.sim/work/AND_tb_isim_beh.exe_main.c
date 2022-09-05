@@ -22,10 +22,9 @@ int main(int argc, char **argv)
     xsi_register_info(&xsi_info);
 
     xsi_register_min_prec_unit(-12);
-    unisims_ver_m_00000000002717766859_2200107557_init();
-    unisims_ver_m_00000000002717766859_4167325880_init();
+    unisims_ver_m_00000000002717766859_1587779503_init();
     unisims_ver_m_00000000002717766859_3673634492_init();
-    work_m_00000000002998272211_3319667384_init();
+    work_m_00000000000199971442_3319667384_init();
     work_m_00000000002381968638_1860683421_init();
     work_m_00000000004134447467_2073120511_init();
 

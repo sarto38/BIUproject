@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2022-07-29T00:59:13</DateModified>
+  <DateModified>2022-09-06T00:25:48</DateModified>
   <ModuleName>FPGA_top</ModuleName>
   <SummaryTimeStamp>2020-07-23T14:13:46</SummaryTimeStamp>
-  <SavedFilePath>C:/ISE/3LUt/iseconfig/FPGA_top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/ISE/3LUt\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/USER/Desktop/BIUproject/ISE/3d/iseconfig/FPGA_top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/USER/Desktop/BIUproject/ISE/3d\</ImplementationReportsDirectory>
   <DateInitialized>2020-05-26T15:57:59</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\ISE\MainProject2LUTnotOpCorrect\FPGA_top.ncd
-OUTFILE=C:\ISE\MainProject2LUTnotOpCorrect\FPGA_top.bit
+INFILE=C:\Users\USER\Desktop\BIUproject\ISE\3d\FPGA_top.ncd
+OUTFILE=C:\Users\USER\Desktop\BIUproject\ISE\3d\FPGA_top.bit
 FAMILY=Automotive Spartan6
 PART=xa6slx75-3fgg484
-WORKINGDIR=C:\ISE\MainProject2LUTnotOpCorrect
+WORKINGDIR=C:\Users\USER\Desktop\BIUproject\ISE\3d
 LICENSE=WebPack
 USER_INFO=__0_0_0

@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.23 secs
+Total CPU time to Xst completion: 0.31 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.24 secs
+Total CPU time to Xst completion: 0.31 secs
  
 --> Reading design: FPGA_top.prj
 
@@ -105,7 +105,7 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\ISE\3LUt\FPGA_top.v" into library work
+Analyzing Verilog file "C:\Users\USER\Desktop\BIUproject\ISE\3d\FPGA_top.v" into library work
 Parsing verilog file "AND2.v" included at line 1.
 Parsing module <AND2>.
 Parsing verilog file "FSM.v" included at line 2.
@@ -126,8 +126,8 @@ Parsing module <UART_top>.
 Parsing verilog file "RingOscillator.v" included at line 6.
 Parsing module <RingOscillator>.
 Parsing module <FPGA_top>.
-WARNING:HDLCompiler:1335 - "C:\ISE\3LUt\FPGA_top.v" Line 13: Port FTDI_BDBUS must not be declared to be an array
-Parsing VHDL file "C:\ISE\3LUt\clk_4Mhz.vhd" into library work
+WARNING:HDLCompiler:1335 - "C:\Users\USER\Desktop\BIUproject\ISE\3d\FPGA_top.v" Line 13: Port FTDI_BDBUS must not be declared to be an array
+Parsing VHDL file "C:\Users\USER\Desktop\BIUproject\ISE\3d\clk_4Mhz.vhd" into library work
 Parsing entity <clk_4Mhz>.
 Parsing architecture <xilinx> of entity <clk_4mhz>.
 
@@ -158,51 +158,51 @@ WARNING:HDLCompiler:413 - "FSM.v" Line 44: Result of 9-bit expression is truncat
 WARNING:HDLCompiler:413 - "FSM.v" Line 64: Result of 5-bit expression is truncated to fit in 4-bit target.
 
 Elaborating module <SR_receive(M=16)>.
-WARNING:HDLCompiler:1016 - "AND2.v" Line 94: Port O6 is not connected to this instance
+WARNING:HDLCompiler:1016 - "AND2.v" Line 92: Port O6 is not connected to this instance
+WARNING:HDLCompiler:1016 - "AND2.v" Line 103: Port O6 is not connected to this instance
+WARNING:HDLCompiler:1016 - "AND2.v" Line 115: Port O6 is not connected to this instance
 
 Elaborating module <AND2(D=3)>.
 
-Elaborating module <LUT6_2(INIT=64'b010101010000000001010101010001000100001110111011101111000)>.
-WARNING:HDLCompiler:413 - "AND2.v" Line 84: Result of 3-bit expression is truncated to fit in 2-bit target.
-
-Elaborating module <LUT6_2(INIT=64'b010010110100101101001011010010110)>.
+Elaborating module <LUT6_2(INIT=64'b1100110011001100000000000000000010010101011010100110101001101010)>.
+WARNING:HDLCompiler:413 - "AND2.v" Line 82: Result of 3-bit expression is truncated to fit in 2-bit target.
 
 Elaborating module <LUT6_2(INIT=64'b1001011010010110100101101001011010010110100101101001011010010110)>.
-WARNING:HDLCompiler:1127 - "C:\ISE\3LUt\FPGA_top.v" Line 111: Assignment to OutAnd ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\USER\Desktop\BIUproject\ISE\3d\FPGA_top.v" Line 111: Assignment to OutAnd ignored, since the identifier is never used
 
 Elaborating module <SR_transmit(D=3)>.
-WARNING:HDLCompiler:189 - "C:\ISE\3LUt\FPGA_top.v" Line 117: Size mismatch in connection of port <in>. Formal port size is 3-bit while actual signal size is 2-bit.
-WARNING:HDLCompiler:634 - "C:\ISE\3LUt\FPGA_top.v" Line 38: Net <OutAndFinel[1]> does not have a driver.
+WARNING:HDLCompiler:189 - "C:\Users\USER\Desktop\BIUproject\ISE\3d\FPGA_top.v" Line 117: Size mismatch in connection of port <in>. Formal port size is 3-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:634 - "C:\Users\USER\Desktop\BIUproject\ISE\3d\FPGA_top.v" Line 38: Net <OutAndFinel[1]> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <FPGA_top>.
-    Related source file is "C:\ISE\3LUt\FPGA_top.v".
+    Related source file is "C:\Users\USER\Desktop\BIUproject\ISE\3d\FPGA_top.v".
         D = 3
         M = 16
-INFO:Xst:3210 - "C:\ISE\3LUt\FPGA_top.v" line 52: Output port <LOCKED> of the instance <newClk> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\ISE\3LUt\FPGA_top.v" line 105: Output port <out> of the instance <I_AND> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\USER\Desktop\BIUproject\ISE\3d\FPGA_top.v" line 52: Output port <LOCKED> of the instance <newClk> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\USER\Desktop\BIUproject\ISE\3d\FPGA_top.v" line 105: Output port <out> of the instance <I_AND> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <OutAndFinel> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
 	no macro.
 Unit <FPGA_top> synthesized.
 
 Synthesizing Unit <clk_4Mhz>.
-    Related source file is "C:\ISE\3LUt\clk_4Mhz.vhd".
+    Related source file is "C:\Users\USER\Desktop\BIUproject\ISE\3d\clk_4Mhz.vhd".
     Summary:
 	no macro.
 Unit <clk_4Mhz> synthesized.
 
 Synthesizing Unit <UART_top>.
-    Related source file is "C:\ISE\3LUt/UART_top.v".
+    Related source file is "C:\Users\USER\Desktop\BIUproject\ISE\3d/UART_top.v".
     Summary:
 	no macro.
 Unit <UART_top> synthesized.
 
 Synthesizing Unit <UART_rx>.
-    Related source file is "C:\ISE\3LUt/UART_rx.v".
+    Related source file is "C:\Users\USER\Desktop\BIUproject\ISE\3d/UART_rx.v".
         IDLE = 1'b0
         READ = 1'b1
     Found 1-bit register for signal <RxDone>.
@@ -239,7 +239,7 @@ WARNING:Xst:737 - Found 1-bit latch for signal <read_enable>. Latches may be gen
 Unit <UART_rx> synthesized.
 
 Synthesizing Unit <UART_tx>.
-    Related source file is "C:\ISE\3LUt/UART_tx.v".
+    Related source file is "C:\Users\USER\Desktop\BIUproject\ISE\3d/UART_tx.v".
         IDLE = 1'b0
         WRITE = 1'b1
     Found 1-bit register for signal <TxDone>.
@@ -262,7 +262,7 @@ Synthesizing Unit <UART_tx>.
 Unit <UART_tx> synthesized.
 
 Synthesizing Unit <UART_BaudRate_generator>.
-    Related source file is "C:\ISE\3LUt/UART_baudrate_generator.v".
+    Related source file is "C:\Users\USER\Desktop\BIUproject\ISE\3d/UART_baudrate_generator.v".
     Found 16-bit register for signal <baudRateReg>.
     Found 16-bit adder for signal <baudRateReg[15]_GND_18_o_add_0_OUT> created at line 25.
     Summary:
@@ -272,7 +272,7 @@ Synthesizing Unit <UART_BaudRate_generator>.
 Unit <UART_BaudRate_generator> synthesized.
 
 Synthesizing Unit <FSM>.
-    Related source file is "C:\ISE\3LUt/FSM.v".
+    Related source file is "C:\Users\USER\Desktop\BIUproject\ISE\3d/FSM.v".
         M = 16
 WARNING:Xst:647 - Input <TxDone> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 4-bit register for signal <State>.
@@ -313,7 +313,7 @@ WARNING:Xst:647 - Input <TxDone> is never used. This port will be preserved and 
 Unit <FSM> synthesized.
 
 Synthesizing Unit <SR_receive>.
-    Related source file is "C:\ISE\3LUt/SR_receive.v".
+    Related source file is "C:\Users\USER\Desktop\BIUproject\ISE\3d/SR_receive.v".
         M = 16
     Found 1-bit register for signal <n0069<15>>.
     Found 1-bit register for signal <n0069<14>>.
@@ -337,7 +337,7 @@ Synthesizing Unit <SR_receive>.
 Unit <SR_receive> synthesized.
 
 Synthesizing Unit <AND2>.
-    Related source file is "C:\ISE\3LUt/AND2.v".
+    Related source file is "C:\Users\USER\Desktop\BIUproject\ISE\3d/AND2.v".
         D = 3
     Set property "DONT_TOUCH = true" for instance <And1>.
     Set property "LOCK_PINS = ALL" for instance <And1>.
@@ -354,18 +354,21 @@ Synthesizing Unit <AND2>.
     Set property "DONT_TOUCH = true" for instance <And6>.
     Set property "LOCK_PINS = ALL" for instance <And6>.
     Set property "KEEP_HIERARCHY = TRUE" for instance <And6>.
+    Set property "DONT_TOUCH = true" for instance <And7>.
+    Set property "LOCK_PINS = ALL" for instance <And7>.
+    Set property "KEEP_HIERARCHY = TRUE" for instance <And7>.
     Found 9-bit register for signal <mid_reg>.
     Found 3-bit register for signal <out>.
     Found 2-bit register for signal <counter>.
     Found 1-bit register for signal <AndDone>.
-    Found 2-bit adder for signal <counter[1]_GND_22_o_add_3_OUT> created at line 84.
+    Found 2-bit adder for signal <counter[1]_GND_22_o_add_3_OUT> created at line 82.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  15 D-type flip-flop(s).
 Unit <AND2> synthesized.
 
 Synthesizing Unit <SR_transmit>.
-    Related source file is "C:\ISE\3LUt/SR_transmit.v".
+    Related source file is "C:\Users\USER\Desktop\BIUproject\ISE\3d/SR_transmit.v".
         D = 3
     WARNING:Xst:2404 -  FFs/Latches <reg_mat<1><3:3>> (without init value) have a constant value of 0 in block <SR_transmit>.
     WARNING:Xst:2404 -  FFs/Latches <reg_mat<0><1:1>> (without init value) have a constant value of 0 in block <SR_transmit>.
@@ -614,7 +617,7 @@ Top Level Output File Name         : FPGA_top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 152
+# BELS                             : 153
 #      GND                         : 1
 #      INV                         : 4
 #      LUT1                        : 12
@@ -623,7 +626,7 @@ Primitive and Black Box Usage:
 #      LUT4                        : 12
 #      LUT5                        : 23
 #      LUT6                        : 18
-#      LUT6_2                      : 5
+#      LUT6_2                      : 6
 #      MUXCY                       : 11
 #      VCC                         : 1
 #      XORCY                       : 13
@@ -653,14 +656,14 @@ Selected Device : xa6slx75fgg484-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:              96  out of  93296     0%  
- Number of Slice LUTs:                  126  out of  46648     0%  
-    Number used as Logic:               126  out of  46648     0%  
+ Number of Slice LUTs:                  127  out of  46648     0%  
+    Number used as Logic:               127  out of  46648     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    151
-   Number with an unused Flip Flop:      55  out of    151    36%  
-   Number with an unused LUT:            25  out of    151    16%  
-   Number of fully used LUT-FF pairs:    71  out of    151    47%  
+ Number of LUT Flip Flop pairs used:    152
+   Number with an unused Flip Flop:      56  out of    152    36%  
+   Number with an unused LUT:            25  out of    152    16%  
+   Number of fully used LUT-FF pairs:    71  out of    152    46%  
    Number of unique control sets:        41
 
 IO Utilization: 
@@ -1065,13 +1068,13 @@ M_CLK_OSC                                   |    5.206|         |         |     
 
 
 Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 8.23 secs
+Total CPU time to Xst completion: 8.92 secs
  
 --> 
 
-Total memory usage is 4516160 kilobytes
+Total memory usage is 4515332 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   64 (   0 filtered)
+Number of warnings :   66 (   0 filtered)
 Number of infos    :    3 (   0 filtered)
 

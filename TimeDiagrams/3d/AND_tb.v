@@ -34,6 +34,7 @@ always #1 clk = ~clk;
 initial
 begin
 
+
 AndEnable= 1'b0;
 #1
 
