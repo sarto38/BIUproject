@@ -202,7 +202,15 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
+    <transform xil_pn:end_ts="1662716669" xil_pn:in_ck="5331752718320106557" xil_pn:name="TRAN_impactProgrammingTool" xil_pn:prop_ck="-5808709807072650295" xil_pn:start_ts="1662716669">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
     <transform xil_pn:end_ts="1605263942" xil_pn:in_ck="5331752718320106557" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="3013362611380892931" xil_pn:start_ts="1605259878">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1662716092" xil_pn:in_ck="5331752718320106557" xil_pn:name="TRAN_genImpactFile" xil_pn:prop_ck="6339374228834744461" xil_pn:start_ts="1662716089">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>

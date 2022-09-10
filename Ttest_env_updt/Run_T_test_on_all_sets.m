@@ -37,7 +37,7 @@ for l = 1:1%num_of_sets
     regular_t_test=1;%1;
 
 
-    Nfiles=50;%958;%197;%100;%1550;%1450;%1499;%850;%1499;
+    Nfiles=10;%958;%197;%100;%1550;%1450;%1499;%850;%1499;
     skip_files = 0;%20;
     Nfiles = Nfiles-skip_files;
     NtracesPfile=20000;
