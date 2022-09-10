@@ -8,7 +8,7 @@ import picoscope
 import time
 import serial
 import numpy as np
-import scipy.io
+from scipy.io import savemat
 from picoscope import ps5000a
 import os
 import binascii as ba
@@ -27,7 +27,7 @@ Queries = 20000 # 20000
 Naverage = 1
 
 # number of files
-NoFiles = 400
+NoFiles = 10
 
 # saving method 1 for NPY (Python compatible), 2 for MAT (Matlab compatible),
 # 0 for not saving the workspace
@@ -35,7 +35,7 @@ saving_met = 2
 
 # Serial Port Configuration
 BaudRate = 9600  # 57600    # baud/s
-COM_aux = 'COM4'  # 'COM4'
+COM_aux = 'COM8'  # 'COM4'
 
 # Oscilloscope configuration
 """
@@ -93,13 +93,13 @@ print('--------------------------------------------------------------')
 
 # Channel A configuration
 ChAEnabled = True
-ChACoupling = 1  # 0 - AC ; 1 - DC
-ChARange = 0.02  # 20mV
+ChACoupling = 0  # 0 - AC ; 1 - DC
+ChARange = 0.2  # 200mV
 ChAOffset = 0
 
 # Channel B configuration
 ChBEnabled = True
-ChBCoupling = 1  # 0 - AC ; 1 - DC
+ChBCoupling = 0  # 0 - AC ; 1 - DC
 ChBRange = 5.0
 ChBOffset = 0
 
@@ -191,7 +191,7 @@ for j in range(0, NoFiles, 1):
     # mat of 20000x600 zeros
     traces = np.zeros((Queries, NumPostTriggerSamples), dtype=np.int16)
 
-    path = '../Traces/File' + repr(j) + '.mat'
+    path = '../Data/New/File' + repr(j) + '.mat'
     path_timeNs = '../Traces/timeNs.mat'
     assure_path_exists(path)
 
@@ -254,7 +254,7 @@ for j in range(0, NoFiles, 1):
     print('Acquisition completed.')
 
     timeNs = np.linspace(0, NumPostTriggerSamples * SamplingTime, NumPostTriggerSamples,
-                         endpoint=False, retstep=False, dtype=np.float)
+                         endpoint=False, retstep=False, dtype=float)
 
     if saving_met == 1:
         """
@@ -286,9 +286,9 @@ for j in range(0, NoFiles, 1):
                   'NumPostTriggerSamples': NumPostTriggerSamples,
                   'BitsResolution': BitsResolution,
                   'Queries': Queries}
-        scipy.io.savemat(str_save_traces_mat, data_1, format='5',
+        savemat(str_save_traces_mat, data_1, format='5',
                          do_compression=True, oned_as='row')
-        scipy.io.savemat(str_save_conf_mat, data_2, format='5',
+        savemat(str_save_conf_mat, data_2, format='5',
                          do_compression=True, oned_as='row')
     else:
         print('WARNING: workspace and dataset are not saved yet...')
